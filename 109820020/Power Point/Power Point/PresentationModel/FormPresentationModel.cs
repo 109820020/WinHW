@@ -80,35 +80,35 @@ namespace Power_Point
         }
 
         //  在畫布中按下左鍵
-        public void CanvasPressed(int x, int y)
+        public void CanvasPressed(int pointX, int pointY)
         {
             if (_shapeTool == ShapeTool.Line)
             {
-                IShape hint = new Line(x, y, x, y);
+                IShape hint = new Line(pointX, pointY, pointX, pointY);
                 _model.CanvasPressed(hint);
             }
             else if (_shapeTool == ShapeTool.Rectangle)
             {
-                IShape hint = new Rectangle(x, y, x, y);
+                IShape hint = new Rectangle(pointX, pointY, pointX, pointY);
                 _model.CanvasPressed(hint);
             }
             else if (_shapeTool == ShapeTool.Circle)
             {
-                IShape hint = new Circle(x, y, x, y);
+                IShape hint = new Circle(pointX, pointY, pointX, pointY);
                 _model.CanvasPressed(hint);
             }
         }
 
         // 在畫布中放開左鍵
-        public void CanvasReleased(int x, int y)
+        public void CanvasReleased(int pointX, int pointY)
         {
-            _model.CanvasReleased(x, y);
+            _model.CanvasReleased(pointX, pointY);
         }
 
         // 在畫布中移動
-        public void CanvasMoved(int x, int y)
+        public void CanvasMoved(int pointX, int pointY)
         {
-            _model.CanvasMoved(x, y);
+            _model.CanvasMoved(pointX, pointY);
         }
         
         // 畫布繪圖

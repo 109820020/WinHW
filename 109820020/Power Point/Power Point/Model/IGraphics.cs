@@ -15,7 +15,7 @@ namespace Power_Point
         void DrawLine(int x1, int y1, int x2, int y2);
 
         // 畫矩形，(x1, y1), (x2, y2)為不相等任意兩點
-        void DrawRect(int x1, int y1, int x2, int y2);
+        void DrawRectangle(int x1, int y1, int x2, int y2);
 
         // 畫圓，(x1, y1), (x2, y2)為不相等任意兩點
         void DrawCircle(int x1, int y1, int x2, int y2);

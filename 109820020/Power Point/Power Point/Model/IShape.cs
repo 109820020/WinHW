@@ -15,7 +15,7 @@ namespace Power_Point
         string GetInfo();
 
         // 設定第二點
-        void SetSecondPoint(int x, int y);
+        void SetSecondPoint(int pointX, int pointY);
 
         // 畫布繪圖
         void Draw(IGraphics graphics);

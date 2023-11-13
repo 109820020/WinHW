@@ -46,7 +46,7 @@ namespace Power_Point
         // 畫布繪圖
         void IShape.Draw(IGraphics graphics)
         {
-            graphics.DrawRect(_x1, _y1, _x2, _y2);
+            graphics.DrawRectangle(_x1, _y1, _x2, _y2);
         }
     }
 }

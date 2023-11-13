@@ -54,23 +54,23 @@ namespace Power_Point
         }
 
         // 在畫布中放開左鍵
-        public void CanvasReleased(int x, int y)
+        public void CanvasReleased(int pointX, int pointY)
         {
             if (_isCanvasPressed)
             {
                 _isCanvasPressed = false;
-                _hint.SetSecondPoint(x, y);
+                _hint.SetSecondPoint(pointX, pointY);
                 _shapes.AddShape(_hint);
                 NotifyModelChanged();
             }
         }
 
         // 在畫布中移動
-        public void CanvasMoved(int x, int y)
+        public void CanvasMoved(int pointX, int pointY)
         {
             if (_isCanvasPressed)
             {
-                _hint.SetSecondPoint(x, y);
+                _hint.SetSecondPoint(pointX, pointY);
                 NotifyModelChanged();
             }
         }

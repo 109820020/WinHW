@@ -29,7 +29,7 @@ namespace Power_Point
         }
         
         // 畫矩形
-        public void DrawRect(int x1, int y1, int x2, int y2)
+        public void DrawRectangle(int x1, int y1, int x2, int y2)
         {
             if (!(x1 == x2 && y1 == y2))
                 _graphics.DrawRectangle(Pens.Black, Math.Min(x1, x2), Math.Min(y1, y2), 
