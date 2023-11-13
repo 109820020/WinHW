@@ -42,9 +42,10 @@ namespace Power_Point
             this._button1 = new System.Windows.Forms.Button();
             this._button2 = new System.Windows.Forms.Button();
             this._toolBar = new System.Windows.Forms.ToolStrip();
-            this._toolRectangle = new System.Windows.Forms.ToolStripButton();
             this._toolLine = new System.Windows.Forms.ToolStripButton();
+            this._toolRectangle = new System.Windows.Forms.ToolStripButton();
             this._toolCircle = new System.Windows.Forms.ToolStripButton();
+            this._toolPointer = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this._shapeDataGridView)).BeginInit();
             this._dataGroupBox.SuspendLayout();
             this._menu.SuspendLayout();
@@ -145,7 +146,6 @@ namespace Power_Point
             this._menuDescription});
             this._menu.Location = new System.Drawing.Point(0, 0);
             this._menu.Name = "_menu";
-            this._menu.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this._menu.Size = new System.Drawing.Size(1184, 27);
             this._menu.TabIndex = 5;
             this._menu.Text = "menu";
@@ -190,24 +190,14 @@ namespace Power_Point
             this._toolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._toolLine,
             this._toolRectangle,
-            this._toolCircle});
+            this._toolCircle,
+            this._toolPointer});
             this._toolBar.Location = new System.Drawing.Point(0, 27);
             this._toolBar.Name = "_toolBar";
             this._toolBar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this._toolBar.Size = new System.Drawing.Size(1184, 27);
             this._toolBar.TabIndex = 6;
             this._toolBar.Text = "toolStrip1";
-            // 
-            // _toolRectangle
-            // 
-            this._toolRectangle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._toolRectangle.Image = global::Power_Point.Properties.Resources.Rect;
-            this._toolRectangle.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._toolRectangle.Name = "_toolRectangle";
-            this._toolRectangle.Size = new System.Drawing.Size(29, 24);
-            this._toolRectangle.Text = "Rectangle";
-            this._toolRectangle.ToolTipText = "Rectangle";
-            this._toolRectangle.Click += new System.EventHandler(this.ToolRectangleClick);
             // 
             // _toolLine
             // 
@@ -220,6 +210,17 @@ namespace Power_Point
             this._toolLine.ToolTipText = "Line";
             this._toolLine.Click += new System.EventHandler(this.ToolLineClick);
             // 
+            // _toolRectangle
+            // 
+            this._toolRectangle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolRectangle.Image = global::Power_Point.Properties.Resources.Rect;
+            this._toolRectangle.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolRectangle.Name = "_toolRectangle";
+            this._toolRectangle.Size = new System.Drawing.Size(29, 24);
+            this._toolRectangle.Text = "Rectangle";
+            this._toolRectangle.ToolTipText = "Rectangle";
+            this._toolRectangle.Click += new System.EventHandler(this.ToolRectangleClick);
+            // 
             // _toolCircle
             // 
             this._toolCircle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -230,6 +231,17 @@ namespace Power_Point
             this._toolCircle.Text = "Circle";
             this._toolCircle.ToolTipText = "Circle";
             this._toolCircle.Click += new System.EventHandler(this.ToolCircleClick);
+            // 
+            // _toolPointer
+            // 
+            this._toolPointer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolPointer.Image = global::Power_Point.Properties.Resources.Pointer;
+            this._toolPointer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolPointer.Name = "_toolPointer";
+            this._toolPointer.Size = new System.Drawing.Size(29, 24);
+            this._toolPointer.Text = "toolStripButton1";
+            this._toolPointer.ToolTipText = "Pointer";
+            this._toolPointer.Click += new System.EventHandler(this.ToolPointerClick);
             // 
             // Form1
             // 
@@ -274,6 +286,7 @@ namespace Power_Point
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _dataColumn;
+        private System.Windows.Forms.ToolStripButton _toolPointer;
     }
 }
 

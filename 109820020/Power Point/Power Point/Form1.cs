@@ -99,7 +99,13 @@ namespace Power_Point
             _formPresentationModel.ToolBarClick("Circle");
             RefreshControls();
         }
-        
+
+        //
+        private void ToolPointerClick(object sender, EventArgs e)
+        {
+
+        }
+
         // 在畫布中按下左鍵
         public void HandleCanvasPressed(object sender, System.Windows.Forms.MouseEventArgs e)
         {

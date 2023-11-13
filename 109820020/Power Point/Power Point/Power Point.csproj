@@ -133,19 +133,14 @@
     <None Include="Resources\Test50x50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\Test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Resources\Test50x50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Resources\Line.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Resources\Circle.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Resources\Rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Resources\Line.png" />
+    <None Include="Properties\Resources\Pointer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
