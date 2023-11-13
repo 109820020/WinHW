@@ -100,7 +100,7 @@ namespace Power_Point
             RefreshControls();
         }
 
-        //
+        // 工具列Pointer按下
         private void ToolPointerClick(object sender, EventArgs e)
         {
 

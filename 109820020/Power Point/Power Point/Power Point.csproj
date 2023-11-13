@@ -121,18 +121,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Line.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Test50x50.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Resources\Circle.png" />
   </ItemGroup>
   <ItemGroup>
