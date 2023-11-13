@@ -63,9 +63,9 @@ namespace Power_Point.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap Test {
+        internal static System.Drawing.Bitmap Circle {
             get {
-                object obj = ResourceManager.GetObject("Test", resourceCulture);
+                object obj = ResourceManager.GetObject("Circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Power_Point.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap Test1 {
+        internal static System.Drawing.Bitmap Line {
             get {
-                object obj = ResourceManager.GetObject("Test1", resourceCulture);
+                object obj = ResourceManager.GetObject("Line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Power_Point.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap Test50x50 {
+        internal static System.Drawing.Bitmap Rect {
             get {
-                object obj = ResourceManager.GetObject("Test50x50", resourceCulture);
+                object obj = ResourceManager.GetObject("Rect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
