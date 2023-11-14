@@ -64,6 +64,9 @@
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\CircleState.cs" />
+    <Compile Include="Model\RectangleState.cs" />
+    <Compile Include="Model\LineState.cs" />
     <Compile Include="Model\DrawingState.cs" />
     <Compile Include="Model\PointState.cs" />
     <Compile Include="Model\IState.cs" />

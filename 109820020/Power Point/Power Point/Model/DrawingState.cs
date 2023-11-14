@@ -6,30 +6,17 @@ using System.Threading.Tasks;
 
 namespace Power_Point
 {
-    public class DrawingState : IState
+    abstract public class DrawingState : IState
     {
-        private const string STATE_NAME = "Line";
-        private Model _model;
-        private bool _isMouseDown;
-        private Shape _hint;
-
-        public DrawingState(Model model)
-        {
-            this._model = model;
-            _isMouseDown = false;
-        }
+        protected Model _model;
+        protected bool _isMouseDown;
+        protected Shape _hint;
+        protected string _stateName;
 
         // GetStateName
         public string GetStateName()
         {
-            return STATE_NAME;
-        }
-
-        // MouseDown
-        public void MouseDown(int pointX, int pointY)
-        {
-            _isMouseDown = true;
-            _hint = new Line(pointX, pointY, pointX, pointY);
+            return _stateName;
         }
 
         // MouseMove
@@ -60,5 +47,8 @@ namespace Power_Point
                 _hint.Draw(graphics);
             }
         }
+
+        // MouseDown
+        abstract public void MouseDown(int pointX, int pointY);
     }
 }

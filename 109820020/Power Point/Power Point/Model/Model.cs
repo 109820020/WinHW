@@ -17,16 +17,22 @@ namespace Power_Point
         private const string RECTANGLE = "Rectangle";
         private const string CIRCLE = "Circle";
         private const string POINTER = "Pointer";
+
         private Shapes _shapes;
         private IState _state;
         private PointState _pointState;
-        private DrawingState _drawingState;
+        private LineState _lineState;
+        private RectangleState _rectangleState;
+        private CircleState _circleState;
 
         public Model()
         {
             _shapes = new Shapes();
+
             _pointState = new PointState(this);
-            _drawingState = new DrawingState(this);
+            _lineState = new LineState(this);
+            _rectangleState = new RectangleState(this);
+            _circleState = new CircleState(this);
             // 預設 Point State
             _state = _pointState;
         }
@@ -68,9 +74,17 @@ namespace Power_Point
             {
                 _state = _pointState;
             }
-            else
+            else if (shapeType == LINE)
             {
-                _state = _drawingState;
+                _state = _lineState;
+            }
+            else if (shapeType == RECTANGLE)
+            {
+                _state = _rectangleState;
+            }
+            else if (shapeType == CIRCLE)
+            {
+                _state = _circleState;
             }
         }
 
@@ -103,6 +117,7 @@ namespace Power_Point
         // 畫布繪圖
         public void Draw(IGraphics graphics)
         {
+            graphics.ClearAll();
             _shapes.DrawAllShapes(graphics);
             _state.Draw(graphics);
         }
