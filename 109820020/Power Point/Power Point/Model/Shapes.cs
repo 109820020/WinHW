@@ -3,20 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace Power_Point
 {
     class Shapes
     {
-        private List<IShape> _shapeList;
+        private BindingList<Shape> _shapeList;
         private Factory _factory;
 
         public Shapes()
         {
-            _shapeList = new List<IShape>();
+            _shapeList = new BindingList<Shape>();
             _factory = new Factory();
         }
-        
+
+        // binding DataGridView 所需屬性
+        public BindingList<Shape> ShapeList
+        {
+            get
+            {
+                return this._shapeList;
+            }
+        }
+
         // AddShape(string)
         public void AddShape(string shapeName)
         {
@@ -24,7 +34,7 @@ namespace Power_Point
         }
 
         // AddShape(IShape)
-        public void AddShape(IShape shape)
+        public void AddShape(Shape shape)
         {
             _shapeList.Add(shape);
         }
@@ -35,28 +45,10 @@ namespace Power_Point
             _shapeList.RemoveAt(index);
         }
         
-        // 取得所有形狀的名子
-        public List<string> GetAllName()
-        {
-            List<string> nameList = new List<string>();
-            foreach (IShape shape in _shapeList)
-                nameList.Add(shape.GetShapeName());
-            return nameList;
-        }
-        
-        // 取得所有形狀的資訊
-        public List<string> GetAllInfo()
-        {
-            List<string> infoList = new List<string>();
-            foreach (IShape shape in _shapeList)
-                infoList.Add(shape.GetInfo());
-            return infoList;
-        }
-        
         // 畫布繪圖
-        public void Draw(IGraphics graphics)
+        public void DrawAllShapes(IGraphics graphics)
         {
-            foreach (IShape shape in _shapeList)
+            foreach (Shape shape in _shapeList)
                 shape.Draw(graphics);
         }
     }

@@ -67,7 +67,7 @@
     <Compile Include="Model\IGraphics.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\Factory.cs" />
-    <Compile Include="Model\IShape.cs" />
+    <Compile Include="Model\Shape.cs" />
     <Compile Include="Model\Line.cs" />
     <Compile Include="Model\Circle.cs" />
     <Compile Include="Model\Rectangle.cs" />

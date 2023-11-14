@@ -21,7 +21,7 @@ namespace Power_Point
         }
         
         // AddShape
-        public IShape AddShape(string shapeName)
+        public Shape AddShape(string shapeName)
         {
             Random random = new Random();
             (int _x, int _y)  _topLeft = (random.Next(CANVAS_LEFT, CANVAS_RIGHT), random.Next(CANVAS_UP, CANVAS_BOTTOM));

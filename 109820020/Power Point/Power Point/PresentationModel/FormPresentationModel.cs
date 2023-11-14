@@ -84,17 +84,17 @@ namespace Power_Point
         {
             if (_shapeTool == ShapeTool.Line)
             {
-                IShape hint = new Line(pointX, pointY, pointX, pointY);
+                Shape hint = new Line(pointX, pointY, pointX, pointY);
                 _model.CanvasPressed(hint);
             }
             else if (_shapeTool == ShapeTool.Rectangle)
             {
-                IShape hint = new Rectangle(pointX, pointY, pointX, pointY);
+                Shape hint = new Rectangle(pointX, pointY, pointX, pointY);
                 _model.CanvasPressed(hint);
             }
             else if (_shapeTool == ShapeTool.Circle)
             {
-                IShape hint = new Circle(pointX, pointY, pointX, pointY);
+                Shape hint = new Circle(pointX, pointY, pointX, pointY);
                 _model.CanvasPressed(hint);
             }
         }

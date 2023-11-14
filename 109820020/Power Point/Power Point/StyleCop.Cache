@@ -139,7 +139,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 19:40:56.067</sourceFile>
+      <sourceFile>2023/11/14 21:42:51.621</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -147,12 +147,12 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
         <context>Unsuitable naming(名不符實)-GetAllshapeName(allshape)</context>
-        <line>38</line>
-        <index>928</index>
-        <endIndex>1028</endIndex>
-        <startLine>38</startLine>
+        <line>48</line>
+        <index>1121</index>
+        <endIndex>1221</endIndex>
+        <startLine>48</startLine>
         <startColumn>9</startColumn>
-        <endLine>41</endLine>
+        <endLine>51</endLine>
         <endColumn>9</endColumn>
         <warning>False</warning>
       </violation>

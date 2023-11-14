@@ -36,6 +36,9 @@ namespace Power_Point
             _canvas.Paint += HandleCanvasPaint;
             Controls.Add(_canvas);
 
+            // _shapeDataGridView binding
+            _shapeDataGridView.DataSource = _model.Shapes;
+
             _shapeDropDownList.SelectedItem = "線";
             RefreshControls();
         }
@@ -47,13 +50,6 @@ namespace Power_Point
             _toolRectangle.Checked = _formPresentationModel.IsToolRectangleChecked();
             _toolCircle.Checked = _formPresentationModel.IsToolCircleChecked();
             Cursor = _formPresentationModel.GetCursorType();
-            
-            // dataGridView rows refresh
-            List<string> shapeName = _model.GetAllshapeName();
-            List<string> shapeInfo = _model.GetAllShapeInfo();
-            _shapeDataGridView.Rows.Clear();
-            for (int i = 0; i < shapeName.Count; i++)
-                _shapeDataGridView.Rows.Add("", shapeName[i], shapeInfo[i]);
         }
         
         // Button1Click

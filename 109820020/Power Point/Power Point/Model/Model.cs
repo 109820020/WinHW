@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Power_Point
 {
@@ -12,14 +14,23 @@ namespace Power_Point
         public delegate void ModelChangedEventHandler();
         private Shapes _shapes;
         private bool _isCanvasPressed;
-        private IShape _hint;
+        private Shape _hint;
 
         public Model()
         {
             _shapes = new Shapes();
             _isCanvasPressed = false;
         }
-        
+
+        // binding DataGridView 所需屬性
+        public BindingList<Shape> Shapes
+        {
+            get
+            {
+                return _shapes.ShapeList;
+            }
+        }
+
         // 新增形狀
         public void AddShape(string shapeName)
         {
@@ -33,21 +44,9 @@ namespace Power_Point
             _shapes.DeleteShape(index);
             NotifyModelChanged();
         }
-        
-        // 取得DataGridView裡所有rows的形狀類別
-        public List<string> GetAllshapeName()
-        {
-            return _shapes.GetAllName();
-        }
-        
-        // 取得DataGridView裡所有rows的形狀資訊
-        public List<string> GetAllShapeInfo()
-        {
-            return _shapes.GetAllInfo();
-        }
 
         // 在畫布中按下左鍵
-        public void CanvasPressed(IShape hint)
+        public void CanvasPressed(Shape hint)
         {
             _hint = hint;
             _isCanvasPressed = true;
@@ -78,7 +77,7 @@ namespace Power_Point
         // 畫布繪圖
         public void Draw(IGraphics graphics)
         {
-            _shapes.Draw(graphics);
+            _shapes.DrawAllShapes(graphics);
             if (_isCanvasPressed)
                 _hint.Draw(graphics);
         }
