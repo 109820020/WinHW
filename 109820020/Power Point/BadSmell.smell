@@ -194,7 +194,7 @@
               <Weight>1</Weight>
               <Project>Power Point</Project>
               <File>Form1.cs</File>
-              <Line>69</Line>
+              <Line>70</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -204,7 +204,7 @@
             </Smell>
             <Smell>
               <Id>2</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\TAIK3\Downloads\視窗\code\109820020\109820020\Power Point\Power Point\Model\Circle.cs on line 36.</SmellType>
+              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Circle.cs on line 36.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>Power Point</Project>
@@ -219,7 +219,7 @@
             </Smell>
             <Smell>
               <Id>3</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\TAIK3\Downloads\視窗\code\109820020\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</SmellType>
+              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>Power Point</Project>
@@ -234,39 +234,7 @@
             </Smell>
             <Smell>
               <Id>4</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.IShape.SetSecondPoint.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>IShape.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.IShape.SetSecondPoint.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>IShape.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>6</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\TAIK3\Downloads\視窗\code\109820020\109820020\Power Point\Power Point\Model\Line.cs on line 36.</SmellType>
+              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Line.cs on line 36.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>Power Point</Project>
@@ -280,7 +248,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>7</Id>
+              <Id>5</Id>
               <SmellType>Unsuitable naming(名不符實)-GetAllshapeName(allshape)</SmellType>
               <HashCode>UnsuitableNaming.Model.GetAllshapeName.GetAllshapeName</HashCode>
               <Severity>Red</Severity>
@@ -296,72 +264,8 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>8</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.CanvasReleased.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Model.cs</File>
-              <Line>57</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>9</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.CanvasReleased.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Model.cs</File>
-              <Line>57</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>10</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.CanvasMoved.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Model.cs</File>
-              <Line>69</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>11</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.CanvasMoved.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Model.cs</File>
-              <Line>69</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>12</Id>
-              <SmellType>A syntax error has been discovered in file C:\Users\TAIK3\Downloads\視窗\code\109820020\109820020\Power Point\Power Point\Model\Rectangle.cs on line 36.</SmellType>
+              <Id>6</Id>
+              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Rectangle.cs on line 36.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>Power Point</Project>
@@ -375,23 +279,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>13</Id>
-              <SmellType>ICS(空白與空行-15)</SmellType>
-              <HashCode>SpacingAndNewLine15</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Shapes.cs</File>
-              <Line>48</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>14</Id>
+              <Id>7</Id>
               <SmellType>Long method(過長函式)</SmellType>
               <HashCode>LongMethod.FormPresentationModel.ToolBarClick.24string shapeType;</HashCode>
               <Severity>Warning</Severity>
@@ -399,102 +287,6 @@
               <Project>Power Point</Project>
               <File>FormPresentationModel.cs</File>
               <Line>33</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.CanvasPressed.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>16</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.CanvasPressed.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>17</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.CanvasReleased.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>103</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>18</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.CanvasReleased.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>103</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>19</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.CanvasMoved.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>109</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>20</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.CanvasMoved.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>109</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -597,7 +389,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>855</ProductionLoc>
+          <ProductionLoc>880</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

@@ -1,0 +1,5 @@
+問陳 smell 覆蓋
+shape x y
+
+交前:
+    決定要不要修new
