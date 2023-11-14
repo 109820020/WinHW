@@ -51,7 +51,7 @@ namespace Power_Point
         }
 
         // 取得游標類型
-        public Cursor GetCursorType()
+        public Cursor GetCanvasCursorType()
         {
             return _model.GetToolState() == POINTER ? Cursors.Default : Cursors.Cross;
         }

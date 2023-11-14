@@ -14,7 +14,7 @@ namespace Power_Point
     {
         private Model _model;
         private FormPresentationModel _formPresentationModel;
-        Panel _canvas; // private
+        private Panel _canvas;
 
         public Form1(Model model, FormPresentationModel formPresentationModel)
         {
@@ -50,7 +50,8 @@ namespace Power_Point
             _toolLine.Checked = _formPresentationModel.IsToolLineChecked();
             _toolRectangle.Checked = _formPresentationModel.IsToolRectangleChecked();
             _toolCircle.Checked = _formPresentationModel.IsToolCircleChecked();
-            Cursor = _formPresentationModel.GetCursorType();
+            _toolPointer.Checked = _formPresentationModel.IsToolPointerChecked();
+            _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
         }
         
         // Button1Click

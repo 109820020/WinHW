@@ -111,6 +111,7 @@ namespace Power_Point
         public void CanvasReleased(int pointX, int pointY)
         {
             _state.MouseUp(pointX, pointY);
+            _state = _pointState;
             NotifyModelChanged();
         }
         
