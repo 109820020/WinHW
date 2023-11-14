@@ -58,11 +58,6 @@ namespace Power_Point
         {
         }
         
-        // Button2Click
-        private void Button2Click(object sender, EventArgs e)
-        {
-        }
-        
         // 新增Shape
         private void NewButtonClick(object sender, EventArgs e)
         {
@@ -86,7 +81,7 @@ namespace Power_Point
         // 工具列矩形按下
         private void ToolRectangleClick(object sender, EventArgs e)
         {
-            _formPresentationModel.ToolBarClick("Rect");
+            _formPresentationModel.ToolBarClick("Rectangle");
             RefreshControls();
         }
         
@@ -100,7 +95,8 @@ namespace Power_Point
         // 工具列Pointer按下
         private void ToolPointerClick(object sender, EventArgs e)
         {
-
+            _formPresentationModel.ToolBarClick("Pointer");
+            RefreshControls();
         }
 
         // 在畫布中按下左鍵

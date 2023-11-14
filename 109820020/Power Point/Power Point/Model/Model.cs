@@ -12,14 +12,23 @@ namespace Power_Point
     {
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
+
+        private const string LINE = "Line";
+        private const string RECTANGLE = "Rectangle";
+        private const string CIRCLE = "Circle";
+        private const string POINTER = "Pointer";
         private Shapes _shapes;
-        private bool _isCanvasPressed;
-        private Shape _hint;
+        private IState _state;
+        private PointState _pointState;
+        private DrawingState _drawingState;
 
         public Model()
         {
             _shapes = new Shapes();
-            _isCanvasPressed = false;
+            _pointState = new PointState(this);
+            _drawingState = new DrawingState(this);
+            // 預設 Point State
+            _state = _pointState;
         }
 
         // binding DataGridView 所需屬性
@@ -31,13 +40,20 @@ namespace Power_Point
             }
         }
 
-        // 新增形狀
+        // 新增隨機形狀
         public void AddShape(string shapeName)
         {
             _shapes.AddShape(shapeName);
             NotifyModelChanged();
         }
-        
+
+        // 新增形狀
+        public void AddShape(Shape shape)
+        {
+            _shapes.AddShape(shape);
+            NotifyModelChanged();
+        }
+
         // 刪除形狀
         public void DeleteShape(int index)
         {
@@ -45,41 +61,50 @@ namespace Power_Point
             NotifyModelChanged();
         }
 
-        // 在畫布中按下左鍵
-        public void CanvasPressed(Shape hint)
+        // ChangeState
+        public void ChangeState(string shapeType)
         {
-            _hint = hint;
-            _isCanvasPressed = true;
+            if (shapeType == POINTER)
+            {
+                _state = _pointState;
+            }
+            else
+            {
+                _state = _drawingState;
+            }
         }
 
-        // 在畫布中放開左鍵
-        public void CanvasReleased(int pointX, int pointY)
+        // 取得工具列狀態
+        public string GetToolState()
         {
-            if (_isCanvasPressed)
-            {
-                _isCanvasPressed = false;
-                _hint.SetSecondPoint(pointX, pointY);
-                _shapes.AddShape(_hint);
-                NotifyModelChanged();
-            }
+            return _state.GetStateName();
+        }
+
+        // 在畫布中按下左鍵
+        public void CanvasPressed(int pointX, int pointY)
+        {
+            _state.MouseDown(pointX, pointY);
         }
 
         // 在畫布中移動
         public void CanvasMoved(int pointX, int pointY)
         {
-            if (_isCanvasPressed)
-            {
-                _hint.SetSecondPoint(pointX, pointY);
-                NotifyModelChanged();
-            }
+            _state.MouseMove(pointX, pointY);
+            NotifyModelChanged();
+        }
+
+        // 在畫布中放開左鍵
+        public void CanvasReleased(int pointX, int pointY)
+        {
+            _state.MouseUp(pointX, pointY);
+            NotifyModelChanged();
         }
         
         // 畫布繪圖
         public void Draw(IGraphics graphics)
         {
             _shapes.DrawAllShapes(graphics);
-            if (_isCanvasPressed)
-                _hint.Draw(graphics);
+            _state.Draw(graphics);
         }
         
         // Model改變事件

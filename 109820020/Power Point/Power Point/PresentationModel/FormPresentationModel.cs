@@ -9,94 +9,57 @@ namespace Power_Point
 {
     public class FormPresentationModel
     {
-        enum ShapeTool
-        {
-            None,
-            Line,
-            Rectangle,
-            Circle
-        }
-
         private const string LINE = "Line";
-        private const string RECTANGLE = "Rect";
+        private const string RECTANGLE = "Rectangle";
         private const string CIRCLE = "Circle";
-        private ShapeTool _shapeTool;
+        private const string POINTER = "Pointer";
         private Model _model;
 
         public FormPresentationModel(Model model)
         {
             this._model = model;
-            _shapeTool = ShapeTool.None;
         }
         
         // 工具列按鈕被按下
         public void ToolBarClick(string shapeType)
         {
-            if (shapeType == LINE)
-            {
-                if (_shapeTool == ShapeTool.Line)
-                    _shapeTool = ShapeTool.None;
-                else
-                    _shapeTool = ShapeTool.Line;
-            }
-            else if (shapeType == RECTANGLE)
-            {
-                if (_shapeTool == ShapeTool.Rectangle)
-                    _shapeTool = ShapeTool.None;
-                else
-                    _shapeTool = ShapeTool.Rectangle;
-            }
-            else if (shapeType == CIRCLE)
-            {
-                if (_shapeTool == ShapeTool.Circle)
-                    _shapeTool = ShapeTool.None;
-                else
-                    _shapeTool = ShapeTool.Circle;
-            }
+            _model.ChangeState(shapeType);
         }
         
         // 工具列線是否按下
         public bool IsToolLineChecked()
         {
-            return _shapeTool == ShapeTool.Line;
+            return _model.GetToolState() == LINE;
         }
         
         // 工具列矩形是否按下
         public bool IsToolRectangleChecked()
         {
-            return _shapeTool == ShapeTool.Rectangle;
+            return _model.GetToolState() == RECTANGLE;
         }
         
         // 工具列圓是否按下
         public bool IsToolCircleChecked()
         {
-            return _shapeTool == ShapeTool.Circle;
+            return _model.GetToolState() == CIRCLE;
         }
-        
+
+        // 工具列指標是否按下
+        public bool IsToolPointerChecked()
+        {
+            return _model.GetToolState() == POINTER;
+        }
+
         // 取得游標類型
         public Cursor GetCursorType()
         {
-            return _shapeTool == ShapeTool.None ? Cursors.Default : Cursors.Cross;
+            return _model.GetToolState() == POINTER ? Cursors.Default : Cursors.Cross;
         }
 
         //  在畫布中按下左鍵
         public void CanvasPressed(int pointX, int pointY)
         {
-            if (_shapeTool == ShapeTool.Line)
-            {
-                Shape hint = new Line(pointX, pointY, pointX, pointY);
-                _model.CanvasPressed(hint);
-            }
-            else if (_shapeTool == ShapeTool.Rectangle)
-            {
-                Shape hint = new Rectangle(pointX, pointY, pointX, pointY);
-                _model.CanvasPressed(hint);
-            }
-            else if (_shapeTool == ShapeTool.Circle)
-            {
-                Shape hint = new Circle(pointX, pointY, pointX, pointY);
-                _model.CanvasPressed(hint);
-            }
+            _model.CanvasPressed(pointX, pointY);
         }
 
         // 在畫布中放開左鍵

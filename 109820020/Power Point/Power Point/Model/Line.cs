@@ -20,13 +20,6 @@ namespace Power_Point
             this._y2 = y2;
         }
 
-        // 設定第二點
-        public override void SetSecondPoint(int pointX, int pointY)
-        {
-            this._x2 = pointX;
-            this._y2 = pointY;
-        }
-
         // 畫布繪圖
         public override void Draw(IGraphics graphics)
         {

@@ -64,7 +64,11 @@ namespace Power_Point
         }
 
         // 設定第二點
-        abstract public void SetSecondPoint(int pointX, int pointY);
+        public void ChangeSecondPoint(int pointX, int pointY)
+        {
+            this._x2 = pointX;
+            this._y2 = pointY;
+        }
 
         // 畫布繪圖
         abstract public void Draw(IGraphics graphics);

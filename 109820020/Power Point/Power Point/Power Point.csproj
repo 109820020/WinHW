@@ -64,6 +64,9 @@
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\DrawingState.cs" />
+    <Compile Include="Model\PointState.cs" />
+    <Compile Include="Model\IState.cs" />
     <Compile Include="Model\IGraphics.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\Factory.cs" />
