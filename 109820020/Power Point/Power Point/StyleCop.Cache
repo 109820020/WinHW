@@ -49,7 +49,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/14 21:56:05.133</sourceFile>
+      <sourceFile>2023/11/15 00:12:20.404</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -57,7 +57,7 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Method2" ruleCheckId="MT0002">
         <context>ICS(函式-2)</context>
-        <line>66</line>
+        <line>67</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -66,7 +66,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 17:26:29.870</sourceFile>
+      <sourceFile>2023/11/15 00:14:34.682</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -77,24 +77,12 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/14 23:35:29.737</sourceFile>
+      <sourceFile>2023/11/14 23:58:59.358</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
-        <context>ICS(變數-3)</context>
-        <line>13</line>
-        <index>275</index>
-        <endIndex>277</endIndex>
-        <startLine>13</startLine>
-        <startColumn>21</startColumn>
-        <endLine>13</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Factory.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
@@ -128,24 +116,12 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/14 23:33:22.022</sourceFile>
+      <sourceFile>2023/11/15 00:02:30.767</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
-        <context>ICS(變數-3)</context>
-        <line>13</line>
-        <index>273</index>
-        <endIndex>275</endIndex>
-        <startLine>13</startLine>
-        <startColumn>21</startColumn>
-        <endLine>13</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Model.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
@@ -162,113 +138,23 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/14 23:34:24.334</sourceFile>
+      <sourceFile>2023/11/15 00:02:35.107</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
-        <context>ICS(變數-3)</context>
-        <line>13</line>
-        <index>279</index>
-        <endIndex>281</endIndex>
-        <startLine>13</startLine>
-        <startColumn>21</startColumn>
-        <endLine>13</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Shape.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/14 23:28:14.072</sourceFile>
+      <sourceFile>2023/11/15 00:31:23.644</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
-        <context>ICS(變數-3)</context>
-        <line>14</line>
-        <index>362</index>
-        <endIndex>364</endIndex>
-        <startLine>14</startLine>
-        <startColumn>21</startColumn>
-        <endLine>14</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"("</context>
-        <line>29</line>
-        <index>733</index>
-        <endIndex>735</endIndex>
-        <startLine>29</startLine>
-        <startColumn>20</startColumn>
-        <endLine>29</endLine>
-        <endColumn>22</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"("</context>
-        <line>29</line>
-        <index>763</index>
-        <endIndex>765</endIndex>
-        <startLine>29</startLine>
-        <startColumn>50</startColumn>
-        <endLine>29</endLine>
-        <endColumn>52</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-", "</context>
-        <line>29</line>
-        <index>744</index>
-        <endIndex>747</endIndex>
-        <startLine>29</startLine>
-        <startColumn>31</startColumn>
-        <endLine>29</endLine>
-        <endColumn>34</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-", "</context>
-        <line>29</line>
-        <index>774</index>
-        <endIndex>777</endIndex>
-        <startLine>29</startLine>
-        <startColumn>61</startColumn>
-        <endLine>29</endLine>
-        <endColumn>64</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"),"</context>
-        <line>29</line>
-        <index>756</index>
-        <endIndex>759</endIndex>
-        <startLine>29</startLine>
-        <startColumn>43</startColumn>
-        <endLine>29</endLine>
-        <endColumn>46</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-")"</context>
-        <line>29</line>
-        <index>786</index>
-        <endIndex>788</endIndex>
-        <startLine>29</startLine>
-        <startColumn>73</startColumn>
-        <endLine>29</endLine>
-        <endColumn>75</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Shapes.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
