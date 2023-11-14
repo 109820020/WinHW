@@ -9,8 +9,6 @@ namespace Power_Point
     class Line : Shape
     {
         private const string NAME = "線";
-        private string _name;
-        private int _x1, _y1, _x2, _y2;
 
         // 任意兩點
         public Line(int x1, int y1, int x2, int y2)

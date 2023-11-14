@@ -20,6 +20,17 @@
   <project key="-23073754">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <sourcecode name="IShape.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2023/11/11 23:53:26.946</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2023/11/13 19:32:34.594</sourceFile>
+      <parser>2023/11/11 23:53:26.946</parser>
+      <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
   <project key="-590209249">
     <configuration>DEBUG;TRACE</configuration>
   </project>
@@ -38,7 +49,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 18:48:21.342</sourceFile>
+      <sourceFile>2023/11/14 21:56:05.133</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -46,7 +57,7 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Method2" ruleCheckId="MT0002">
         <context>ICS(函式-2)</context>
-        <line>70</line>
+        <line>66</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -66,15 +77,21 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:36:00.133</sourceFile>
+      <sourceFile>2023/11/14 23:35:29.737</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="StyleCop.CSharp.CsParser" rule="SyntaxException" ruleCheckId="SA0102">
-        <context>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Circle.cs on line 36.</context>
-        <line>36</line>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
+        <context>ICS(變數-3)</context>
+        <line>13</line>
+        <index>275</index>
+        <endIndex>277</endIndex>
+        <startLine>13</startLine>
+        <startColumn>21</startColumn>
+        <endLine>13</endLine>
+        <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -83,7 +100,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:36:00.108</sourceFile>
+      <sourceFile>2023/11/14 23:45:03.961</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -107,30 +124,25 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="IShape.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2023/11/11 23:53:26.946</styleCop>
-      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 19:32:34.594</sourceFile>
-      <parser>2023/11/11 23:53:26.946</parser>
-      <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
-      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
   <sourcecode name="Line.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:36:00.095</sourceFile>
+      <sourceFile>2023/11/14 23:33:22.022</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="StyleCop.CSharp.CsParser" rule="SyntaxException" ruleCheckId="SA0102">
-        <context>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Line.cs on line 36.</context>
-        <line>36</line>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
+        <context>ICS(變數-3)</context>
+        <line>13</line>
+        <index>273</index>
+        <endIndex>275</endIndex>
+        <startLine>13</startLine>
+        <startColumn>21</startColumn>
+        <endLine>13</endLine>
+        <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -139,38 +151,121 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/14 21:42:51.621</sourceFile>
+      <sourceFile>2023/11/14 23:48:53.253</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
-        <context>Unsuitable naming(名不符實)-GetAllshapeName(allshape)</context>
-        <line>48</line>
-        <index>1121</index>
-        <endIndex>1221</endIndex>
-        <startLine>48</startLine>
-        <startColumn>9</startColumn>
-        <endLine>51</endLine>
-        <endColumn>9</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Rectangle.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 19:27:28.228</sourceFile>
+      <sourceFile>2023/11/14 23:34:24.334</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="StyleCop.CSharp.CsParser" rule="SyntaxException" ruleCheckId="SA0102">
-        <context>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Rectangle.cs on line 36.</context>
-        <line>36</line>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
+        <context>ICS(變數-3)</context>
+        <line>13</line>
+        <index>279</index>
+        <endIndex>281</endIndex>
+        <startLine>13</startLine>
+        <startColumn>21</startColumn>
+        <endLine>13</endLine>
+        <endColumn>23</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="Shape.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2023/11/11 23:53:26.946</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2023/11/14 23:28:14.072</sourceFile>
+      <parser>2023/11/11 23:53:26.946</parser>
+      <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable3" ruleCheckId="VR0003">
+        <context>ICS(變數-3)</context>
+        <line>14</line>
+        <index>362</index>
+        <endIndex>364</endIndex>
+        <startLine>14</startLine>
+        <startColumn>21</startColumn>
+        <endLine>14</endLine>
+        <endColumn>23</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-"("</context>
+        <line>29</line>
+        <index>733</index>
+        <endIndex>735</endIndex>
+        <startLine>29</startLine>
+        <startColumn>20</startColumn>
+        <endLine>29</endLine>
+        <endColumn>22</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-"("</context>
+        <line>29</line>
+        <index>763</index>
+        <endIndex>765</endIndex>
+        <startLine>29</startLine>
+        <startColumn>50</startColumn>
+        <endLine>29</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-", "</context>
+        <line>29</line>
+        <index>744</index>
+        <endIndex>747</endIndex>
+        <startLine>29</startLine>
+        <startColumn>31</startColumn>
+        <endLine>29</endLine>
+        <endColumn>34</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-", "</context>
+        <line>29</line>
+        <index>774</index>
+        <endIndex>777</endIndex>
+        <startLine>29</startLine>
+        <startColumn>61</startColumn>
+        <endLine>29</endLine>
+        <endColumn>64</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-"),"</context>
+        <line>29</line>
+        <index>756</index>
+        <endIndex>759</endIndex>
+        <startLine>29</startLine>
+        <startColumn>43</startColumn>
+        <endLine>29</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-")"</context>
+        <line>29</line>
+        <index>786</index>
+        <endIndex>788</endIndex>
+        <startLine>29</startLine>
+        <startColumn>73</startColumn>
+        <endLine>29</endLine>
+        <endColumn>75</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -179,7 +274,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:36:00.057</sourceFile>
+      <sourceFile>2023/11/14 23:48:04.801</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -190,7 +285,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 19:43:04.646</sourceFile>
+      <sourceFile>2023/11/14 23:49:13.164</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>

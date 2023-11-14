@@ -9,8 +9,6 @@ namespace Power_Point
     class Rectangle : Shape
     {
         private const string NAME = "矩形";
-        private string _name;
-        private int _x1, _y1, _x2, _y2;
 
         // 任意兩點
         public Rectangle(int x1, int y1, int x2, int y2)

@@ -10,8 +10,8 @@ namespace Power_Point
     abstract public class Shape : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private string _name;
-        private int _x1, _y1, _x2, _y2;
+        public string _name;
+        public int _x1, _y1, _x2, _y2;
 
         // GetShapeName
         string GetShapeName()
