@@ -37,6 +37,7 @@ namespace Power_Point
             Controls.Add(_canvas);
 
             // _shapeDataGridView binding
+            _shapeDataGridView.AutoGenerateColumns = false;
             _shapeDataGridView.DataSource = _model.Shapes;
 
             _shapeDropDownList.SelectedItem = "線";

@@ -87,6 +87,7 @@ namespace Power_Point
             this._shapeColumn.HeaderText = "形狀";
             this._shapeColumn.MinimumWidth = 10;
             this._shapeColumn.Name = "_shapeColumn";
+            this._shapeColumn.DataPropertyName = "Name";
             this._shapeColumn.ReadOnly = true;
             this._shapeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this._shapeColumn.Width = 66;
@@ -96,6 +97,7 @@ namespace Power_Point
             this._dataColumn.HeaderText = "資訊";
             this._dataColumn.MinimumWidth = 10;
             this._dataColumn.Name = "_dataColumn";
+            this._dataColumn.DataPropertyName = "Info";
             this._dataColumn.ReadOnly = true;
             this._dataColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this._dataColumn.Width = 66;
