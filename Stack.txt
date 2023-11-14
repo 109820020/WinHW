@@ -1,6 +1,8 @@
+***
+
 問陳 smell 覆蓋
-shape x y
+SetSecondPoint設定第二點
+Shapes -> AddShape(IShape shape)
 
 交前:
     決定要不要修new
-

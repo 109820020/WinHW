@@ -194,7 +194,7 @@
               <Weight>1</Weight>
               <Project>Power Point</Project>
               <File>Form1.cs</File>
-              <Line>70</Line>
+              <Line>67</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -204,21 +204,6 @@
             </Smell>
             <Smell>
               <Id>2</Id>
-              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Circle.cs on line 36.</SmellType>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Circle.cs</File>
-              <Line>36</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>3</Id>
               <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
@@ -233,53 +218,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>4</Id>
-              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Line.cs on line 36.</SmellType>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Line.cs</File>
-              <Line>36</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
-              <SmellType>Unsuitable naming(名不符實)-GetAllshapeName(allshape)</SmellType>
-              <HashCode>UnsuitableNaming.Model.GetAllshapeName.GetAllshapeName</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Model.cs</File>
-              <Line>38</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>6</Id>
-              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Rectangle.cs on line 36.</SmellType>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>Power Point</Project>
-              <File>Rectangle.cs</File>
-              <Line>36</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>7</Id>
+              <Id>3</Id>
               <SmellType>Long method(過長函式)</SmellType>
               <HashCode>LongMethod.FormPresentationModel.ToolBarClick.24string shapeType;</HashCode>
               <Severity>Warning</Severity>
@@ -333,11 +272,6 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
-                <RelativePath>Model\IShape.cs</RelativePath>
-                <ProjectName>Power Point</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
-              </AnalysisFile>
-              <AnalysisFile>
                 <RelativePath>Model\Line.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
@@ -349,6 +283,11 @@
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\Rectangle.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\Shape.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
@@ -389,7 +328,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>880</ProductionLoc>
+          <ProductionLoc>1027</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>
