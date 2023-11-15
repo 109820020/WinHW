@@ -3,6 +3,7 @@
 問陳 smell 覆蓋
 SetSecondPoint設定第二點
 Shapes -> AddShape(IShape shape)
+form double
 
 交前:
     決定要不要修new
@@ -11,4 +12,6 @@ Shapes -> AddShape(IShape shape)
     tool State 兩種?
     State 移到 Present
     繪圖效能
-        圖形外框(框線 + 範圍)
+    圖形外框(框線 + 範圍)
+    new
+    shape 移動

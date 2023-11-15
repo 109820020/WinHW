@@ -35,7 +35,7 @@ namespace Power_Point
             this._dataColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._dataGroupBox = new System.Windows.Forms.GroupBox();
             this._shapeDropDownList = new System.Windows.Forms.ComboBox();
-            this._newShapeButton = new System.Windows.Forms.Button();
+            this._addShapeButton = new System.Windows.Forms.Button();
             this._menu = new System.Windows.Forms.MenuStrip();
             this._menuDescription = new System.Windows.Forms.ToolStripMenuItem();
             this._menuAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,7 +105,7 @@ namespace Power_Point
             // 
             this._dataGroupBox.Controls.Add(this._shapeDropDownList);
             this._dataGroupBox.Controls.Add(this._shapeDataGridView);
-            this._dataGroupBox.Controls.Add(this._newShapeButton);
+            this._dataGroupBox.Controls.Add(this._addShapeButton);
             this._dataGroupBox.Location = new System.Drawing.Point(1338, 64);
             this._dataGroupBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this._dataGroupBox.Name = "_dataGroupBox";
@@ -129,16 +129,16 @@ namespace Power_Point
             this._shapeDropDownList.Size = new System.Drawing.Size(114, 23);
             this._shapeDropDownList.TabIndex = 1;
             // 
-            // _newShapeButton
+            // _addShapeButton
             // 
-            this._newShapeButton.Location = new System.Drawing.Point(9, 21);
-            this._newShapeButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this._newShapeButton.Name = "_newShapeButton";
-            this._newShapeButton.Size = new System.Drawing.Size(58, 32);
-            this._newShapeButton.TabIndex = 0;
-            this._newShapeButton.Text = "新增";
-            this._newShapeButton.UseVisualStyleBackColor = true;
-            this._newShapeButton.Click += new System.EventHandler(this.NewButtonClick);
+            this._addShapeButton.Location = new System.Drawing.Point(9, 21);
+            this._addShapeButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this._addShapeButton.Name = "_addShapeButton";
+            this._addShapeButton.Size = new System.Drawing.Size(58, 32);
+            this._addShapeButton.TabIndex = 0;
+            this._addShapeButton.Text = "新增";
+            this._addShapeButton.UseVisualStyleBackColor = true;
+            this._addShapeButton.Click += new System.EventHandler(this.AddButtonClick);
             // 
             // _menu
             // 
@@ -147,7 +147,7 @@ namespace Power_Point
             this._menuDescription});
             this._menu.Location = new System.Drawing.Point(0, 0);
             this._menu.Name = "_menu";
-            this._menu.Size = new System.Drawing.Size(1184, 27);
+            this._menu.Size = new System.Drawing.Size(1184, 30);
             this._menu.TabIndex = 5;
             this._menu.Text = "menu";
             // 
@@ -156,7 +156,7 @@ namespace Power_Point
             this._menuDescription.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._menuAbout});
             this._menuDescription.Name = "_menuDescription";
-            this._menuDescription.Size = new System.Drawing.Size(53, 23);
+            this._menuDescription.Size = new System.Drawing.Size(53, 26);
             this._menuDescription.Text = "說明";
             // 
             // _menuAbout
@@ -167,7 +167,7 @@ namespace Power_Point
             // 
             // _button1
             // 
-            this._button1.Location = new System.Drawing.Point(9, 63);
+            this._button1.Location = new System.Drawing.Point(7, 66);
             this._button1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this._button1.Name = "_button1";
             this._button1.Size = new System.Drawing.Size(138, 83);
@@ -183,10 +183,10 @@ namespace Power_Point
             this._toolRectangle,
             this._toolCircle,
             this._toolPointer});
-            this._toolBar.Location = new System.Drawing.Point(0, 27);
+            this._toolBar.Location = new System.Drawing.Point(0, 30);
             this._toolBar.Name = "_toolBar";
             this._toolBar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this._toolBar.Size = new System.Drawing.Size(1184, 27);
+            this._toolBar.Size = new System.Drawing.Size(1184, 31);
             this._toolBar.TabIndex = 6;
             this._toolBar.Text = "toolStrip1";
             // 
@@ -196,7 +196,7 @@ namespace Power_Point
             this._toolLine.Image = global::Power_Point.Properties.Resources.Line;
             this._toolLine.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolLine.Name = "_toolLine";
-            this._toolLine.Size = new System.Drawing.Size(29, 24);
+            this._toolLine.Size = new System.Drawing.Size(29, 28);
             this._toolLine.Text = "Line";
             this._toolLine.ToolTipText = "Line";
             this._toolLine.Click += new System.EventHandler(this.ToolLineClick);
@@ -207,7 +207,7 @@ namespace Power_Point
             this._toolRectangle.Image = global::Power_Point.Properties.Resources.Rect;
             this._toolRectangle.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolRectangle.Name = "_toolRectangle";
-            this._toolRectangle.Size = new System.Drawing.Size(29, 24);
+            this._toolRectangle.Size = new System.Drawing.Size(29, 28);
             this._toolRectangle.Text = "Rectangle";
             this._toolRectangle.ToolTipText = "Rectangle";
             this._toolRectangle.Click += new System.EventHandler(this.ToolRectangleClick);
@@ -218,7 +218,7 @@ namespace Power_Point
             this._toolCircle.Image = global::Power_Point.Properties.Resources.Circle;
             this._toolCircle.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolCircle.Name = "_toolCircle";
-            this._toolCircle.Size = new System.Drawing.Size(29, 24);
+            this._toolCircle.Size = new System.Drawing.Size(29, 28);
             this._toolCircle.Text = "Circle";
             this._toolCircle.ToolTipText = "Circle";
             this._toolCircle.Click += new System.EventHandler(this.ToolCircleClick);
@@ -229,7 +229,7 @@ namespace Power_Point
             this._toolPointer.Image = global::Power_Point.Properties.Resources.Pointer;
             this._toolPointer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolPointer.Name = "_toolPointer";
-            this._toolPointer.Size = new System.Drawing.Size(29, 24);
+            this._toolPointer.Size = new System.Drawing.Size(29, 28);
             this._toolPointer.Text = "toolStripButton1";
             this._toolPointer.ToolTipText = "Pointer";
             this._toolPointer.Click += new System.EventHandler(this.ToolPointerClick);
@@ -264,7 +264,7 @@ namespace Power_Point
         private System.Windows.Forms.DataGridView _shapeDataGridView;
         private System.Windows.Forms.GroupBox _dataGroupBox;
         private System.Windows.Forms.ComboBox _shapeDropDownList;
-        private System.Windows.Forms.Button _newShapeButton;
+        private System.Windows.Forms.Button _addShapeButton;
         private System.Windows.Forms.MenuStrip _menu;
         private System.Windows.Forms.ToolStripMenuItem _menuDescription;
         private System.Windows.Forms.ToolStripMenuItem _menuAbout;

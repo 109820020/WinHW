@@ -67,7 +67,7 @@ namespace Power_Point
         }
         
         // 新增Shape
-        private void NewButtonClick(object sender, EventArgs e)
+        private void AddButtonClick(object sender, EventArgs e)
         {
             string shape = _shapeDropDownList.SelectedItem.ToString();
             _model.AddShape(shape);
