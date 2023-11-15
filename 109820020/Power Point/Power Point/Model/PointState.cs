@@ -12,8 +12,8 @@ namespace Power_Point
         private Model _model;
         private bool _isMouseDown;
         private int _selectedIndex;
-        private int _mouseDownPointX = 0;
-        private int _mouseDownPointY = 0;
+        private int _previousPointX = 0;
+        private int _previousPointY = 0;
 
         public PointState(Model model)
         {
@@ -32,31 +32,27 @@ namespace Power_Point
         public void MouseDown(int pointX, int pointY)
         {
             _isMouseDown = true;
-            _mouseDownPointX = pointX;
-            _mouseDownPointY = pointY;
+            _previousPointX = pointX;
+            _previousPointY = pointY;
             _selectedIndex = _model.SelectShape(pointX, pointY);
         }
 
         // MouseMove
         public void MouseMove(int pointX, int pointY)
         {
-            //if (_isMouseDown && _selectedIndex >= 0)
-            //{
-            //    _model.MoveShapeTo(pointX - _mouseDownPointX, pointY - _mouseDownPointY);
-            //}
+            if (_isMouseDown && _selectedIndex >= 0)
+            {
+                _model.MoveShape(_selectedIndex, pointX - _previousPointX, pointY - _previousPointY);
+            }
         }
 
         // MouseUp
         public void MouseUp(int pointX, int pointY)
         {
-            //if (_isMouseDown && _selectedIndex >= 0)
-            //{
-            //    _model.MoveShapeTo(pointX - _mouseDownPointX, pointY - _mouseDownPointY);
-            //}
-            //_isMouseDown = true;
-            //_mouseDownPointX = pointX;
-            //_mouseDownPointY = pointY;
-            //_selectedIndex = _model.SelectShape(pointX, pointY);
+            if (_isMouseDown && _selectedIndex >= 0)
+            {
+                _model.MoveShape(_selectedIndex, pointX - _previousPointX, pointY - _previousPointY);
+            }
             _isMouseDown = false;
         }
 

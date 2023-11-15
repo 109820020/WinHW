@@ -116,6 +116,16 @@ namespace Power_Point
             }
         }
 
+        // 移動形狀by位移
+        public void MoveShape(int offsetX, int offsetY)
+        {
+            _x1 += offsetX;
+            _x2 += offsetX;
+            _y1 += offsetY;
+            _y2 += offsetY;
+            NotifyPropertyChanged("Info");
+        }
+
         // 畫布繪圖
         abstract public void Draw(IGraphics graphics);
     }

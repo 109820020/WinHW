@@ -101,6 +101,12 @@ namespace Power_Point
             return _shapes.SelectShape(pointX, pointY);
         }
 
+        // 移動形狀by位移
+        public void MoveShape(int index, int offsetX, int offsetY)
+        {
+            _shapes.MoveShape(index, offsetX, offsetY);
+        }
+
         // 在畫布中按下左鍵
         public void CanvasPressed(int pointX, int pointY)
         {

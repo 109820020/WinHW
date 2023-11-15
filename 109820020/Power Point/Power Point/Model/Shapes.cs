@@ -67,5 +67,11 @@ namespace Power_Point
                 _shapeList[index].Select();
             return index;
         }
+
+        // 移動形狀by位移
+        public void MoveShape(int index, int offsetX, int offsetY)
+        {
+            _shapeList[index].MoveShape(offsetX, offsetY);
+        }
     }
 }

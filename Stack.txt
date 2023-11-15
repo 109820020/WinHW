@@ -6,3 +6,9 @@ Shapes -> AddShape(IShape shape)
 
 交前:
     決定要不要修new
+
+後:
+    tool State 兩種?
+    State 移到 Present
+    繪圖效能
+        圖形外框(框線 + 範圍)

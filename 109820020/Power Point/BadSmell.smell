@@ -194,7 +194,7 @@
               <Weight>1</Weight>
               <Project>Power Point</Project>
               <File>Form1.cs</File>
-              <Line>67</Line>
+              <Line>63</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -204,28 +204,12 @@
             </Smell>
             <Smell>
               <Id>2</Id>
-              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</SmellType>
+              <SmellType>A syntax error has been discovered in file C:\Users\TAIK3\Downloads\視窗\code\HW\WinHW\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>Power Point</Project>
               <File>Factory.cs</File>
               <Line>27</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>3</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.FormPresentationModel.ToolBarClick.24string shapeType;</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>24</Weight>
-              <Project>Power Point</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>33</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -262,6 +246,16 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\CircleState.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\DrawingState.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\Factory.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
@@ -272,7 +266,17 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\IState.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\Line.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\LineState.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
@@ -282,7 +286,17 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\PointState.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\Rectangle.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\RectangleState.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
@@ -297,12 +311,12 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
-                <RelativePath>PresentationModel\FormPresentationModel.cs</RelativePath>
+                <RelativePath>PresentationModel\FormGraphicsAdapter.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
-                <RelativePath>PresentationModel\WindowsFormsGraphicsAdaptor.cs</RelativePath>
+                <RelativePath>PresentationModel\FormPresentationModel.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
@@ -328,7 +342,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1027</ProductionLoc>
+          <ProductionLoc>1206</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>
