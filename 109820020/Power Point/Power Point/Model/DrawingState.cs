@@ -39,6 +39,11 @@ namespace Power_Point
             }
         }
 
+        // KeyDown
+        public void KeyDown(string key)
+        {
+        }
+
         // Draw
         public void Draw(IGraphics graphics)
         {

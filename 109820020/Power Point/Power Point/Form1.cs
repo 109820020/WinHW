@@ -19,7 +19,8 @@ namespace Power_Point
         public Form1(Model model, FormPresentationModel formPresentationModel)
         {
             InitializeComponent();
-            
+            this.KeyDown += new KeyEventHandler(FormKeyDown);
+
             // prepare presentation model and model
             this._model = model;
             _model._modelChanged += HandleModelChanged;
@@ -43,7 +44,7 @@ namespace Power_Point
             _shapeDropDownList.SelectedItem = "線";
             RefreshControls();
         }
-        
+
         // 更新畫面
         private void RefreshControls()
         {
@@ -53,7 +54,13 @@ namespace Power_Point
             _toolPointer.Checked = _formPresentationModel.IsToolPointerChecked();
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
         }
-        
+
+        // 鍵盤輸入
+        public void FormKeyDown(object sender, KeyEventArgs e)
+        {
+            _formPresentationModel.KeyDown(e.KeyCode);
+        }
+
         // Button1Click
         private void Button1Click(object sender, EventArgs e)
         {

@@ -107,6 +107,13 @@ namespace Power_Point
             _shapes.MoveShape(index, offsetX, offsetY);
         }
 
+        // KeyDown
+        public void KeyDown(string key)
+        {
+            _state.KeyDown(key);
+            NotifyModelChanged();
+        }
+
         // 在畫布中按下左鍵
         public void CanvasPressed(int pointX, int pointY)
         {

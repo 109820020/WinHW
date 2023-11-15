@@ -13,13 +13,23 @@ namespace Power_Point
         private const string RECTANGLE = "Rectangle";
         private const string CIRCLE = "Circle";
         private const string POINTER = "Pointer";
+        private const string KEY_DELETE = "Delete";
         private Model _model;
 
         public FormPresentationModel(Model model)
         {
             this._model = model;
         }
-        
+
+        // 鍵盤輸入
+        public void KeyDown(Keys key)
+        {
+            if (key == Keys.Delete)
+            {
+                _model.KeyDown(KEY_DELETE);
+            }
+        }
+
         // 工具列按鈕被按下
         public void ToolBarClick(string shapeType)
         {

@@ -20,6 +20,9 @@ namespace Power_Point
         // MouseUp
         void MouseUp(int pointX, int pointY);
 
+        // KeyDown
+        void KeyDown(string key);
+
         // Draw
         void Draw(IGraphics graphics);
     }

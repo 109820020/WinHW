@@ -9,6 +9,7 @@ namespace Power_Point
     public class PointState : IState
     {
         private const string STATE_NAME = "Pointer";
+        private const string KEY_DELETE = "Delete";
         private Model _model;
         private bool _isMouseDown;
         private int _selectedIndex;
@@ -54,6 +55,16 @@ namespace Power_Point
                 _model.MoveShape(_selectedIndex, pointX - _previousPointX, pointY - _previousPointY);
             }
             _isMouseDown = false;
+        }
+
+        // KeyDown
+        public void KeyDown(string key)
+        {
+            if (_selectedIndex >= 0)
+            {
+                if (key == KEY_DELETE)
+                    _model.DeleteShape(_selectedIndex);
+            }
         }
 
         // Draw
