@@ -51,5 +51,21 @@ namespace Power_Point
             foreach (Shape shape in _shapeList)
                 shape.Draw(graphics);
         }
+
+        // 選取並回傳指標所選取最上面的形狀的index
+        // 無選到任何形狀回傳-1
+        public int SelectShape(int pointX, int pointY)
+        {
+            int index = -1;
+            for (int i = 0; i < _shapeList.Count; i++)
+            {
+                if (_shapeList[i].isCursorIn(pointX, pointY))
+                    index = i;
+                _shapeList[i].UnSelect();
+            }
+            if (index >= 0)
+                _shapeList[index].Select();
+            return index;
+        }
     }
 }

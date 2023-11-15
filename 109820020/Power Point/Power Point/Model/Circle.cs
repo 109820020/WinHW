@@ -24,6 +24,7 @@ namespace Power_Point
         public override void Draw(IGraphics graphics)
         {
             graphics.DrawCircle(_x1, _y1, _x2, _y2);
+            DrawSelectedBox(graphics);
         }
     }
 }

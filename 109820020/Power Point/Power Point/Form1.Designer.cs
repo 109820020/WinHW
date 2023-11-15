@@ -106,7 +106,7 @@ namespace Power_Point
             this._dataGroupBox.Controls.Add(this._shapeDropDownList);
             this._dataGroupBox.Controls.Add(this._shapeDataGridView);
             this._dataGroupBox.Controls.Add(this._newShapeButton);
-            this._dataGroupBox.Location = new System.Drawing.Point(2174, 101);
+            this._dataGroupBox.Location = new System.Drawing.Point(2174, 103);
             this._dataGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._dataGroupBox.Name = "_dataGroupBox";
             this._dataGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);

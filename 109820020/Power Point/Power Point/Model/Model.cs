@@ -94,6 +94,13 @@ namespace Power_Point
             return _state.GetStateName();
         }
 
+        // 選取並回傳指標所選取最上面的形狀的index
+        // 無選到任何形狀回傳-1
+        public int SelectShape(int pointX, int pointY)
+        {
+            return _shapes.SelectShape(pointX, pointY);
+        }
+
         // 在畫布中按下左鍵
         public void CanvasPressed(int pointX, int pointY)
         {

@@ -23,24 +23,42 @@ namespace Power_Point
         }
         
         // 畫線
-        public void DrawLine(int x1, int y1, int x2, int y2)
+        public void DrawLine(int x1, int y1, int x2, int y2, string color = "Red")
         {
-            _graphics.DrawLine(Pens.Red, x1, y1, x2, y2);
+            Pen pen = Pens.Red;
+            if (color == "Black")
+                pen = Pens.Black;
+            else if (color == "Gray")
+                pen = Pens.Gray;
+
+            _graphics.DrawLine(pen, x1, y1, x2, y2);
         }
         
         // 畫矩形
-        public void DrawRectangle(int x1, int y1, int x2, int y2)
+        public void DrawRectangle(int x1, int y1, int x2, int y2, string color = "Red")
         {
+            Pen pen = Pens.Red;
+            if (color == "Black")
+                pen = Pens.Black;
+            else if (color == "Gray")
+                pen = Pens.Gray;
+
             if (!(x1 == x2 && y1 == y2))
-                _graphics.DrawRectangle(Pens.Red, Math.Min(x1, x2), Math.Min(y1, y2), 
+                _graphics.DrawRectangle(pen, Math.Min(x1, x2), Math.Min(y1, y2), 
                     Math.Abs(x1 - x2), Math.Abs(y1 - y2));
         }
         
         // 畫圓
-        public void DrawCircle(int x1, int y1, int x2, int y2)
+        public void DrawCircle(int x1, int y1, int x2, int y2, string color = "Red")
         {
+            Pen pen = Pens.Red;
+            if (color == "Black")
+                pen = Pens.Black;
+            else if (color == "Gray")
+                pen = Pens.Gray;
+
             if (!(x1 == x2 && y1 == y2))
-                _graphics.DrawEllipse(Pens.Red, Math.Min(x1, x2), Math.Min(y1, y2),
+                _graphics.DrawEllipse(pen, Math.Min(x1, x2), Math.Min(y1, y2),
                     Math.Abs(x1 - x2), Math.Abs(y1 - y2));
         }
     }
