@@ -59,9 +59,9 @@ namespace Power_Point
             int index = -1;
             for (int i = 0; i < _shapeList.Count; i++)
             {
-                if (_shapeList[i].isCursorIn(pointX, pointY))
+                if (_shapeList[i].IsCursorIn(pointX, pointY))
                     index = i;
-                _shapeList[i].UnSelect();
+                _shapeList[i].CancelSelect();
             }
             if (index >= 0)
                 _shapeList[index].Select();
