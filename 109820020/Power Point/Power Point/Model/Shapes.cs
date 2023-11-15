@@ -64,7 +64,7 @@ namespace Power_Point
                 _shapeList[i].CancelSelect();
             }
             if (index >= 0)
-                _shapeList[index].Select();
+                _shapeList[index].Select(pointX, pointY);
             return index;
         }
 

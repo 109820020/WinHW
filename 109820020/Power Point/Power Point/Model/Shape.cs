@@ -24,6 +24,12 @@ namespace Power_Point
         protected int _y1;
         protected int _x2;
         protected int _y2;
+        protected int _pressedDownPointX = 0;
+        protected int _pressedDownPointY = 0;
+        protected int _beforeMovingPointX1 = 0;
+        protected int _beforeMovingPointY1 = 0;
+        protected int _beforeMovingPointX2 = 0;
+        protected int _beforeMovingPointY2 = 0;
 
         // GetShapeName
         string GetShapeName()
@@ -87,9 +93,27 @@ namespace Power_Point
         }
 
         // 選取
-        public void Select()
+        public void Select(int pointX, int pointY)
         {
             _isSelect = true;
+            _pressedDownPointX = pointX;
+            _pressedDownPointY = pointY;
+            _beforeMovingPointX1 = _x1;
+            _beforeMovingPointY1 = _y1;
+            _beforeMovingPointX2 = _x2;
+            _beforeMovingPointY2 = _y2;
+        }
+
+        // 移動形狀
+        public void MoveShape(int pointX, int pointY)
+        {
+            int offsetX = pointX - _pressedDownPointX;
+            int offsetY = pointY - _pressedDownPointY;
+            _x1 = _beforeMovingPointX1 + offsetX;
+            _x2 = _beforeMovingPointX2 + offsetX;
+            _y1 = _beforeMovingPointY1 + offsetY;
+            _y2 = _beforeMovingPointY2 + offsetY;
+            NotifyPropertyChanged(INFO);
         }
 
         // 取消選取
@@ -123,16 +147,6 @@ namespace Power_Point
             graphics.DrawCircle(middleX - radius, _y1 - radius, middleX + radius, _y1 + radius, BLACK);
             graphics.DrawCircle(middleX - radius, _y2 - radius, middleX + radius, _y2 + radius, BLACK);
             graphics.DrawCircle(_x2 - radius, middleY - radius, _x2 + radius, middleY + radius, BLACK);
-        }
-
-        // 移動形狀by位移
-        public void MoveShape(int offsetX, int offsetY)
-        {
-            _x1 += offsetX;
-            _x2 += offsetX;
-            _y1 += offsetY;
-            _y2 += offsetY;
-            NotifyPropertyChanged(INFO);
         }
 
         // 畫布繪圖

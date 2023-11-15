@@ -13,8 +13,6 @@ namespace Power_Point
         private Model _model;
         private bool _isMouseDown;
         private int _selectedIndex;
-        private int _previousPointX = 0;
-        private int _previousPointY = 0;
 
         public PointState(Model model)
         {
@@ -33,8 +31,6 @@ namespace Power_Point
         public void MouseDown(int pointX, int pointY)
         {
             _isMouseDown = true;
-            _previousPointX = pointX;
-            _previousPointY = pointY;
             _selectedIndex = _model.SelectShape(pointX, pointY);
         }
 
@@ -43,7 +39,7 @@ namespace Power_Point
         {
             if (_isMouseDown && _selectedIndex >= 0)
             {
-                _model.MoveShape(_selectedIndex, pointX - _previousPointX, pointY - _previousPointY);
+                _model.MoveShape(_selectedIndex, pointX, pointY);
             }
         }
 
@@ -52,7 +48,7 @@ namespace Power_Point
         {
             if (_isMouseDown && _selectedIndex >= 0)
             {
-                _model.MoveShape(_selectedIndex, pointX - _previousPointX, pointY - _previousPointY);
+                _model.MoveShape(_selectedIndex, pointX, pointY);
             }
             _isMouseDown = false;
         }
