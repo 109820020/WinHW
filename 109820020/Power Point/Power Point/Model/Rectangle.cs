@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Power_Point
 {
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
         private const string NAME = "矩形";
 

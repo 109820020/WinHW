@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Power_Point
 {
-    class Circle : Shape
+    public class Circle : Shape
     {
         private const string NAME = "圓";
 

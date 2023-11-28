@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace Power_Point
 {
-    class Shapes
+    public class Shapes
     {
         private BindingList<Shape> _shapeList;
         private Factory _factory;

@@ -32,13 +32,13 @@ namespace Power_Point
         protected int _beforeMovingPointY2 = 0;
 
         // GetShapeName
-        string GetShapeName()
+        public string GetShapeName()
         {
             return _name;
         }
 
         // 取得座標
-        string GetInfo()
+        public string GetInfo()
         {
             int x1 = Math.Min(_x1, _x2);
             int y1 = Math.Min(_y1, _y2);
@@ -67,7 +67,7 @@ namespace Power_Point
         }
 
         // binding DataGridView 所需
-        void NotifyPropertyChanged(string propertyName)
+        private void NotifyPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
             {

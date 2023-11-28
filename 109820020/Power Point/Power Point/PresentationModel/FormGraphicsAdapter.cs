@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Power_Point
 {
-    class FormGraphicsAdapter : IGraphics
+    public class FormGraphicsAdapter : IGraphics
     {
         private const string RED = "Red";
         private const string BLACK = "Black";
