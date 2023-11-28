@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Power_Point
 {
-    class Factory
+    public class Factory
     {
         private const string LINE = "線";
         private const string RECT = "矩形";
@@ -28,7 +28,8 @@ namespace Power_Point
             (int _x, int _y)  _bottomRight = (random.Next(_topLeft._x, CANVAS_RIGHT), random.Next(_topLeft._y, CANVAS_BOTTOM));
             if (shapeName == LINE)
             {
-                return new Line(_topLeft._x, _topLeft._y, _bottomRight._x, _bottomRight._y);
+                //return new Line(_topLeft._x, _topLeft._y, _bottomRight._x, _bottomRight._y);
+                return new Line(0, 1, 2, 3);
             }
             else if (shapeName == RECT)
             {

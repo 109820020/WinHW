@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Power_Point
 {
-    class Line : Shape
+    public class Line : Shape
     {
         private const string NAME = "線";
 

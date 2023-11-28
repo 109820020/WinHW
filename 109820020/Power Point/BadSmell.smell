@@ -299,6 +299,22 @@
             </Smell>
             <Smell>
               <Id>8</Id>
+              <SmellType>ICS(類別宣告-1)</SmellType>
+              <HashCode>ClassDeclaration1.Shape._x1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Shape.cs</File>
+              <Line>23</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>9</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.FormGraphicsAdapter.DrawLine.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -314,7 +330,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>9</Id>
+              <Id>10</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.FormGraphicsAdapter.DrawRectangle.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -330,7 +346,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>10</Id>
+              <Id>11</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.FormGraphicsAdapter.DrawCircle.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -338,6 +354,38 @@
               <Project>Power Point</Project>
               <File>FormGraphicsAdapter.cs</File>
               <Line>55</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解</SmellType>
+              <HashCode>Power PointTests\Power PointTests.FactoryTests.cs.Unresolved warnings(忽視警告)-函式 Initialize 缺乏註解.17</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power PointTests\Power PointTests</Project>
+              <File>FactoryTests.cs</File>
+              <Line>17</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
+              <SmellType>Unresolved warnings(忽視警告)-函式 AddShapeTest 缺乏註解</SmellType>
+              <HashCode>Power PointTests\Power PointTests.FactoryTests.cs.Unresolved warnings(忽視警告)-函式 AddShapeTest 缺乏註解.25</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power PointTests\Power PointTests</Project>
+              <File>FactoryTests.cs</File>
+              <Line>25</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -476,10 +524,20 @@
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Designer</AnalysisFileType>
               </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\FactoryTests.cs</RelativePath>
+                <ProjectName>Power PointTests</ProjectName>
+                <AnalysisFileType>Test</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
+                <ProjectName>Power PointTests</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1401</ProductionLoc>
-          <TestLoc>0</TestLoc>
+          <ProductionLoc>1437</ProductionLoc>
+          <TestLoc>34</TestLoc>
         </CodeReview>
       </Data>
     </div>

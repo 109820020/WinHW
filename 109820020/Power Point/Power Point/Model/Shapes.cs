@@ -33,7 +33,7 @@ namespace Power_Point
             _shapeList.Add(_factory.AddShape(shapeName));
         }
 
-        // AddShape(IShape)
+        // AddShape(Shape)
         public void AddShape(Shape shape)
         {
             _shapeList.Add(shape);
