@@ -97,12 +97,5 @@ namespace Power_Point.Tests
         {
             
         }
-
-        // DrawTest
-        [TestMethod()]
-        public void DrawTest()
-        {
-            
-        }
     }
 }

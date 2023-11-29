@@ -20,5 +20,5 @@ form double
     繼承 測試
 Tset:
     factory -- 隨機數
-    Line... DrawTest
+    Line..., Shape DrawTest
     
