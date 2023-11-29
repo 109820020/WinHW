@@ -6,19 +6,30 @@ Shapes -> AddShape(IShape shape)
 form double
 
 交前:
-    決定要不要修new
+	決定要不要修new
 
 後:
-    tool State 兩種?
-    State 移到 Present
-    繪圖效能
-    圖形外框(框線 + 範圍)
-    new
-    shape 移動
+    	tool State 兩種?
+    	State 移到 Present
+    	繪圖效能
+    	圖形外框(框線 + 範圍)
+    	new
+    	shape 移動
+	Shapes Moveshape
+	Delete 按下時刪除 bug
 助教: 
-    smell忽略
-    繼承 測試
+    	smell忽略
+    	繼承 測試
+    	notify 測試
+	private 是 Object 麼測
+	privatO GetHash ?
+	對各種使用者情境
+	(User    Scenario) 去測試其邏輯與行為是否正確 ?
+	請計算所有你寫的  Test Class 以及  Test Method 並填寫在Summary中。?
 Tset:
-    factory -- 隨機數
-    Line..., Shape DrawTest
+    	factory -- 隨機數
+	DrawTest
+    		Line..., Shape, Shapes, Pointstate, Drawing*1
+	notify
+		Shape
     

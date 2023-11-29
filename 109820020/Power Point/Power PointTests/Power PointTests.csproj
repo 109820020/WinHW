@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -57,11 +58,20 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Model\CircleStateTests.cs" />
     <Compile Include="Model\CircleTests.cs" />
+    <Compile Include="Model\DrawingStateTests.cs" />
     <Compile Include="Model\FactoryTests.cs" />
+    <Compile Include="Model\LineStateTests.cs" />
     <Compile Include="Model\LineTests.cs" />
+    <Compile Include="Model\ModelTests.cs" />
+    <Compile Include="Model\PointStateTests.cs" />
+    <Compile Include="Model\RectangleStateTests.cs" />
     <Compile Include="Model\RectangleTests.cs" />
+    <Compile Include="Model\ShapesTests.cs" />
     <Compile Include="Model\ShapeTests.cs" />
+    <Compile Include="PresentationModel\FormGraphicsAdapterTests.cs" />
+    <Compile Include="PresentationModel\FormPresentationModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +82,9 @@
       <Project>{09B1128E-76B5-42A6-8A5B-9D92E063C29F}</Project>
       <Name>Power Point</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

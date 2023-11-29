@@ -19,6 +19,15 @@ namespace Power_Point
             return _stateName;
         }
 
+        // for test
+        public Shape Hint
+        {
+            get
+            {
+                return _hint;
+            }
+        }
+
         // MouseMove
         public void MouseMove(int pointX, int pointY)
         {

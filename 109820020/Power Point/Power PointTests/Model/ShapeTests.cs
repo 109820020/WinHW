@@ -29,6 +29,20 @@ namespace Power_Point.Tests
             Assert.AreEqual("圓", _shape.GetShapeName());
         }
 
+        // NameTest
+        [TestMethod()]
+        public void NameTest()
+        {
+            Assert.AreEqual("圓", _shape.Name);
+        }
+
+        // InfoTest
+        [TestMethod()]
+        public void InfoTest()
+        {
+            Assert.AreEqual("(2, 1), (4, 3)", _shape.Info);
+        }
+
         // GetInfoTest
         [TestMethod()]
         public void GetInfoTest()
