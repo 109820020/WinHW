@@ -32,4 +32,14 @@ Tset:
     		Line..., Shape, Shapes, Pointstate, Drawing*1
 	notify
 		Shape
+
+redo state -> model -> commend
+or   state -> commend
+
+Dialogs:
+	MessageBox.Show()
+	Modal Dialog: 
+		跳出視窗後，原來的不能用，要等上面的關掉
+OK and Cancel button, DialogResult, ShowDialog
+	Modeless Dialog
     
