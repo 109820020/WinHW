@@ -33,7 +33,7 @@ namespace Power_Point
             this._button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._button1.Name = "_button1";
             this._button1.Size = new System.Drawing.Size(115, 65);
-            this._button1.Text = "12345";
+            this._button1.Text = "";
             this._button1.UseVisualStyleBackColor = true;
             this._button1.Click += new System.EventHandler(this.Button1Click);
             this._splitContainerAll.Panel1.Controls.Add(this._button1);
@@ -77,34 +77,34 @@ namespace Power_Point
         private void Button1Click(object sender, EventArgs e)
         {
         }
-        
+
         // 新增Shape
         private void AddButtonClick(object sender, EventArgs e)
         {
             string shape = _shapeDropDownList.SelectedItem.ToString();
             _model.AddShape(shape);
         }
-        
+
         // 刪除形狀按鈕
         private void DeleteShapeClick(object sender, DataGridViewCellEventArgs e)
         {
             _model.DeleteShape(e.RowIndex);
         }
-        
+
         // 工具列線按下
         private void ToolLineClick(object sender, EventArgs e)
         {
             _formPresentationModel.ToolBarClick("Line");
             RefreshControls();
         }
-        
+
         // 工具列矩形按下
         private void ToolRectangleClick(object sender, EventArgs e)
         {
             _formPresentationModel.ToolBarClick("Rectangle");
             RefreshControls();
         }
-        
+
         // 工具列圓按下
         private void ToolCircleClick(object sender, EventArgs e)
         {
@@ -124,25 +124,25 @@ namespace Power_Point
         {
             _formPresentationModel.CanvasPressed(e.X, e.Y);
         }
-        
+
         // 在畫布中放開左鍵
         public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             _formPresentationModel.CanvasReleased(e.X, e.Y);
         }
-        
+
         // 在畫布中移動
         public void HandleCanvasMoved(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             _formPresentationModel.CanvasMoved(e.X, e.Y);
         }
-        
+
         // 畫布繪圖
         public void HandleCanvasPaint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
             _formPresentationModel.Draw(e.Graphics);
         }
-        
+
         // model改變時會以事件通知此func
         public void HandleModelChanged()
         {
@@ -151,14 +151,24 @@ namespace Power_Point
         }
 
         // SplitContainerAll Splitter 移動時
-        public void SplitContainerAllSplitterMoving(Object sender, System.Windows.Forms.SplitterCancelEventArgs e)
+        public void SplitContainerAllSplitterMoved(Object sender, System.Windows.Forms.SplitterEventArgs e)
         {
-            _button1.Text = _splitContainerAll.Panel1.Width.ToString() + ", " + _button1.Width.ToString();
+            if (_button1 != null)
+            { 
+                _button1.Width = _splitContainerAll.Panel1.Width - 10;
+                _button1.Height = _button1.Width * 9 / 16;
+            }
         }
 
-
-        public void SplitContainerAllSplitterMoved(System.Object sender, System.Windows.Forms.SplitterEventArgs e)
+        // SplitContainerRight Splitter 移動時
+        public void SplitContainerRightSplitterMoved(Object sender, System.Windows.Forms.SplitterEventArgs e)
         {
-
+            if (_button1 != null)
+            {
+                //_button1.Width = _splitContainerAll.Panel1.Width - 10;
+                //_button1.Height = _button1.Width * 9 / 16;
+                _button1.Text = _splitContainerRight.Width.ToString() + ", " + _splitContainerRight.Panel2.Width.ToString();
+            }
         }
+    }
 }
