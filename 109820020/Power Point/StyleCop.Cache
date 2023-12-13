@@ -48,11 +48,14 @@
   <project key="-590209249">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <project key="-680883526">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="DoubleBufferedPanel.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:35:59.738</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.899</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -63,18 +66,217 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 23:42:24.164</sourceFile>
+      <sourceFile>2023/12/13 22:54:31.587</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations />
+    <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-5</context>
+        <line>32</line>
+        <index>1035</index>
+        <endIndex>1035</endIndex>
+        <startLine>32</startLine>
+        <startColumn>63</startColumn>
+        <endLine>32</endLine>
+        <endColumn>63</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-5</context>
+        <line>32</line>
+        <index>1038</index>
+        <endIndex>1038</endIndex>
+        <startLine>32</startLine>
+        <startColumn>66</startColumn>
+        <endLine>32</endLine>
+        <endColumn>66</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-2</context>
+        <line>33</line>
+        <index>1111</index>
+        <endIndex>1111</endIndex>
+        <startLine>33</startLine>
+        <startColumn>69</startColumn>
+        <endLine>33</endLine>
+        <endColumn>69</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-2</context>
+        <line>33</line>
+        <index>1117</index>
+        <endIndex>1117</endIndex>
+        <startLine>33</startLine>
+        <startColumn>75</startColumn>
+        <endLine>33</endLine>
+        <endColumn>75</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-3</context>
+        <line>33</line>
+        <index>1114</index>
+        <endIndex>1114</endIndex>
+        <startLine>33</startLine>
+        <startColumn>72</startColumn>
+        <endLine>33</endLine>
+        <endColumn>72</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-3</context>
+        <line>33</line>
+        <index>1120</index>
+        <endIndex>1120</endIndex>
+        <startLine>33</startLine>
+        <startColumn>78</startColumn>
+        <endLine>33</endLine>
+        <endColumn>78</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-2</context>
+        <line>75</line>
+        <index>3072</index>
+        <endIndex>3072</endIndex>
+        <startLine>75</startLine>
+        <startColumn>89</startColumn>
+        <endLine>75</endLine>
+        <endColumn>89</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-9</context>
+        <line>74</line>
+        <index>2975</index>
+        <endIndex>2975</endIndex>
+        <startLine>74</startLine>
+        <startColumn>46</startColumn>
+        <endLine>74</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-16</context>
+        <line>74</line>
+        <index>2979</index>
+        <endIndex>2980</endIndex>
+        <startLine>74</startLine>
+        <startColumn>50</startColumn>
+        <endLine>74</endLine>
+        <endColumn>51</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-10</context>
+        <line>78</line>
+        <index>3209</index>
+        <endIndex>3210</endIndex>
+        <startLine>78</startLine>
+        <startColumn>57</startColumn>
+        <endLine>78</endLine>
+        <endColumn>58</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-9</context>
+        <line>172</line>
+        <index>6140</index>
+        <endIndex>6140</endIndex>
+        <startLine>172</startLine>
+        <startColumn>52</startColumn>
+        <endLine>172</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-16</context>
+        <line>172</line>
+        <index>6144</index>
+        <endIndex>6145</endIndex>
+        <startLine>172</startLine>
+        <startColumn>56</startColumn>
+        <endLine>172</endLine>
+        <endColumn>57</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-10</context>
+        <line>171</line>
+        <index>6084</index>
+        <endIndex>6085</endIndex>
+        <startLine>171</startLine>
+        <startColumn>68</startColumn>
+        <endLine>171</endLine>
+        <endColumn>69</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
+        <context>Unsuitable naming(名不符實)-SplitContainerAllSplitterMoved(splitter)</context>
+        <line>167</line>
+        <index>5854</index>
+        <endIndex>6172</endIndex>
+        <startLine>167</startLine>
+        <startColumn>9</startColumn>
+        <endLine>174</endLine>
+        <endColumn>9</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-9</context>
+        <line>182</line>
+        <index>6517</index>
+        <endIndex>6517</endIndex>
+        <startLine>182</startLine>
+        <startColumn>52</startColumn>
+        <endLine>182</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-16</context>
+        <line>182</line>
+        <index>6521</index>
+        <endIndex>6522</endIndex>
+        <startLine>182</startLine>
+        <startColumn>56</startColumn>
+        <endLine>182</endLine>
+        <endColumn>57</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
+        <context>Literal constants(字面常數)-10</context>
+        <line>181</line>
+        <index>6461</index>
+        <endIndex>6462</endIndex>
+        <startLine>181</startLine>
+        <startColumn>68</startColumn>
+        <endLine>181</endLine>
+        <endColumn>69</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
+        <context>Unsuitable naming(名不符實)-SplitContainerRightSplitterMoved(splitter)</context>
+        <line>177</line>
+        <index>6230</index>
+        <endIndex>6549</endIndex>
+        <startLine>177</startLine>
+        <startColumn>9</startColumn>
+        <endLine>184</endLine>
+        <endColumn>9</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
   </sourcecode>
   <sourcecode name="Form1.Designer.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 23:42:24.168</sourceFile>
+      <sourceFile>2023/12/13 22:48:46.584</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -85,7 +287,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 00:05:11.690</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.915</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -96,18 +298,57 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 21:05:36.273</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.920</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
+  <sourcecode name="CommandManager.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2023/11/11 23:53:26.946</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2023/12/13 22:00:40.491</sourceFile>
+      <parser>2023/11/11 23:53:26.946</parser>
+      <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DrawCommand.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2023/11/11 23:53:26.946</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2023/12/13 22:56:11.698</sourceFile>
+      <parser>2023/11/11 23:53:26.946</parser>
+      <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
+        <context>Unsuitable naming(名不符實)-Unexecute(unexecute)</context>
+        <line>48</line>
+        <index>1139</index>
+        <endIndex>1274</endIndex>
+        <startLine>48</startLine>
+        <startColumn>9</startColumn>
+        <endLine>52</endLine>
+        <endColumn>9</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Method2" ruleCheckId="MT0002">
+        <context>ICS(函式-2)</context>
+        <line>48</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
   <sourcecode name="DrawingState.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 22:31:01.674</sourceFile>
+      <sourceFile>2023/12/13 22:33:10.814</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -118,15 +359,43 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 00:16:23.602</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.930</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations>
       <violation namespace="StyleCop.CSharp.CsParser" rule="SyntaxException" ruleCheckId="SA0102">
-        <context>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</context>
+        <context>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Model\Factory.cs on line 27.</context>
         <line>27</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="ICommand.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2023/11/11 23:53:26.946</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2023/12/13 21:51:33.064</sourceFile>
+      <parser>2023/11/11 23:53:26.946</parser>
+      <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
+        <context>Unsuitable naming(名不符實)-Unexecute(unexecute)</context>
+        <line>15</line>
+        <index>252</index>
+        <endIndex>268</endIndex>
+        <startLine>15</startLine>
+        <startColumn>9</startColumn>
+        <endLine>15</endLine>
+        <endColumn>25</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Method2" ruleCheckId="MT0002">
+        <context>ICS(函式-2)</context>
+        <line>15</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -135,7 +404,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 21:17:55.444</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.933</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -195,7 +464,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 22:37:57.832</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.937</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -206,7 +475,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/28 14:07:05.253</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.941</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -217,7 +486,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 21:05:36.275</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.944</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -228,18 +497,30 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 22:45:01.801</sourceFile>
+      <sourceFile>2023/12/13 22:45:52.860</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations />
+    <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="UnsuitableNaming" ruleCheckId="UN0001">
+        <context>Unsuitable naming(名不符實)-AddShapeToCmdManager(cmd)</context>
+        <line>69</line>
+        <index>1903</index>
+        <endIndex>2046</endIndex>
+        <startLine>69</startLine>
+        <startColumn>9</startColumn>
+        <endLine>72</endLine>
+        <endColumn>9</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
   </sourcecode>
   <sourcecode name="PointState.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 23:17:26.684</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.951</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -250,7 +531,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 00:04:48.151</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.954</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -261,7 +542,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 21:05:36.275</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.958</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -272,7 +553,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 00:32:41.317</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.962</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -283,7 +564,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 19:52:26.657</sourceFile>
+      <sourceFile>2023/12/13 22:46:22.797</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -294,7 +575,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/28 23:31:12.169</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.978</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -321,7 +602,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/15 22:43:20.567</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.983</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -332,7 +613,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/29 23:32:01.289</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.986</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -343,7 +624,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:35:59.982</sourceFile>
+      <sourceFile>2023/12/13 17:14:48.994</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -354,7 +635,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 17:22:07.303</sourceFile>
+      <sourceFile>2023/12/13 20:49:56.374</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -365,7 +646,7 @@
     <timestamps>
       <styleCop>2023/11/11 23:53:26.946</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2023/11/13 00:35:59.968</sourceFile>
+      <sourceFile>2023/12/13 17:14:49.024</sourceFile>
       <parser>2023/11/11 23:53:26.946</parser>
       <KellyPalRules.KellyPalAnalyzer>2023/11/11 23:53:26.946</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>

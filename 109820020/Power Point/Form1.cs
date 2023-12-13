@@ -33,21 +33,19 @@ namespace Power_Point
             this._button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._button1.Name = "_button1";
             this._button1.Size = new System.Drawing.Size(115, 65);
-            this._button1.Text = "";
             this._button1.UseVisualStyleBackColor = true;
             this._button1.Click += new System.EventHandler(this.Button1Click);
             this._splitContainerAll.Panel1.Controls.Add(this._button1);
 
             // prepare canvas
             _canvas = new DoubleBufferedPanel();
-            _canvas.Location = new System.Drawing.Point(115, 54);
-            _canvas.Size = new System.Drawing.Size(882, 668);
+            CanvasSetLocationAndSize();
             _canvas.BackColor = System.Drawing.Color.White;
             _canvas.MouseDown += HandleCanvasPressed;
             _canvas.MouseUp += HandleCanvasReleased;
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
-            Controls.Add(_canvas);
+            _splitContainerRight.Panel1.Controls.Add(_canvas);
 
             // _shapeDataGridView binding
             _shapeDataGridView.AutoGenerateColumns = false;
@@ -64,7 +62,21 @@ namespace Power_Point
             _toolRectangle.Checked = _formPresentationModel.IsToolRectangleChecked();
             _toolCircle.Checked = _formPresentationModel.IsToolCircleChecked();
             _toolPointer.Checked = _formPresentationModel.IsToolPointerChecked();
+            _toolUndo.Enabled = _model.IsUndoEnabled();
+            _toolRedo.Enabled = _model.IsRedoEnabled();
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
+        }
+
+        // canvas 座標Y值
+        private void CanvasSetLocationAndSize()
+        {
+            int canvasWidth = _splitContainerRight.Panel1.Width - 20;
+            int canvasHeight = canvasWidth * 9 / 16;
+            int canvasLocationY = (_splitContainerRight.Panel1.Height - canvasHeight) / 2;
+            canvasLocationY = canvasLocationY >= 0 ? canvasLocationY : 0;
+
+            _canvas.Location = new System.Drawing.Point(10, canvasLocationY);
+            _canvas.Size = new System.Drawing.Size(canvasWidth, canvasHeight);
         }
 
         // 鍵盤輸入
@@ -82,7 +94,7 @@ namespace Power_Point
         private void AddButtonClick(object sender, EventArgs e)
         {
             string shape = _shapeDropDownList.SelectedItem.ToString();
-            _model.AddShape(shape);
+            _model.AddShapeToCmdManager(shape);
         }
 
         // 刪除形狀按鈕
@@ -140,6 +152,7 @@ namespace Power_Point
         // 畫布繪圖
         public void HandleCanvasPaint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
+            CanvasSetLocationAndSize();
             _formPresentationModel.Draw(e.Graphics);
         }
 
@@ -165,10 +178,23 @@ namespace Power_Point
         {
             if (_button1 != null)
             {
-                //_button1.Width = _splitContainerAll.Panel1.Width - 10;
-                //_button1.Height = _button1.Width * 9 / 16;
-                _button1.Text = _splitContainerRight.Width.ToString() + ", " + _splitContainerRight.Panel2.Width.ToString();
+                _button1.Width = _splitContainerAll.Panel1.Width - 10;
+                _button1.Height = _button1.Width * 9 / 16;
             }
+        }
+
+        // Undo
+        private void ToolUndoClick(object sender, EventArgs e)
+        {
+            _model.Undo();
+            RefreshControls();
+        }
+
+        // Redo
+        private void ToolRedoClick(object sender, EventArgs e)
+        {
+            _model.Redo();
+            RefreshControls();
         }
     }
 }

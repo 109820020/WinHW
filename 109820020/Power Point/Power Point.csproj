@@ -65,6 +65,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Model\CircleState.cs" />
+    <Compile Include="Model\DrawCommand.cs" />
+    <Compile Include="Model\ICommand.cs" />
     <Compile Include="Model\RectangleState.cs" />
     <Compile Include="Model\LineState.cs" />
     <Compile Include="Model\DrawingState.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Model\Line.cs" />
     <Compile Include="Model\Circle.cs" />
     <Compile Include="Model\Rectangle.cs" />
+    <Compile Include="Model\CommandManager.cs" />
     <Compile Include="Model\Shapes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -134,6 +137,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Resources\Line.png" />
+    <None Include="Properties\Resources\Redo.png" />
+    <None Include="Properties\Resources\Undo.png" />
     <None Include="Properties\Resources\Pointer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,15 +28,17 @@ namespace Power_Point
         }
 
         // AddShape(string)
-        public void AddShape(string shapeName)
+        public int AddShape(string shapeName)
         {
             _shapeList.Add(_factory.AddShape(shapeName));
+            return _shapeList.Count - 1;
         }
 
-        // AddShape(Shape)
-        public void AddShape(Shape shape)
+        // AddShape(Shape) 回傳形狀index
+        public int AddShape(Shape shape)
         {
             _shapeList.Add(shape);
+            return _shapeList.Count - 1;
         }
         
         // DeleteShape

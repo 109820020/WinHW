@@ -24,6 +24,7 @@ namespace Power_Point
         private LineState _lineState;
         private RectangleState _rectangleState;
         private CircleState _circleState;
+        private CommandManager _commandManager;
 
         public Model()
         {
@@ -35,6 +36,7 @@ namespace Power_Point
             _circleState = new CircleState(this);
             // 預設 Point State
             _state = _pointState;
+            _commandManager = new CommandManager();
         }
 
         // binding DataGridView 所需屬性
@@ -46,18 +48,35 @@ namespace Power_Point
             }
         }
 
-        // 新增隨機形狀
-        public void AddShape(string shapeName)
+        // for IState 做 Undo Redo
+        public CommandManager CommandManager
         {
-            _shapes.AddShape(shapeName);
-            NotifyModelChanged();
+            get
+            {
+                return _commandManager;
+            }
         }
 
-        // 新增形狀
-        public void AddShape(Shape shape)
+        // 新增隨機形狀 回傳形狀index
+        public int AddShape(string shapeName)
         {
-            _shapes.AddShape(shape);
+            int index = _shapes.AddShape(shapeName);
             NotifyModelChanged();
+            return index;
+        }
+
+        // 新增隨機形狀到 CmdManager
+        public void AddShapeToCommandManager(string shapeName)
+        {
+            _commandManager.Execute(new DrawCommand(this, shapeName));
+        }
+
+        // 新增形狀 回傳形狀index
+        public int AddShape(Shape shape)
+        {
+            int index = _shapes.AddShape(shape);
+            NotifyModelChanged();
+            return index;
         }
 
         // 刪除形狀
@@ -92,6 +111,30 @@ namespace Power_Point
         public string GetToolState()
         {
             return _state.GetStateName();
+        }
+
+        // IsUndoEnabled
+        public bool IsUndoEnabled()
+        {
+            return _commandManager.IsUndoEnabled();
+        }
+
+        // IsRedoEnabled
+        public bool IsRedoEnabled()
+        {
+            return _commandManager.IsRedoEnabled();
+        }
+
+        // Undo
+        public void Undo()
+        {
+            _commandManager.Undo();
+        }
+
+        // Redo
+        public void Redo()
+        {
+            _commandManager.Redo();
         }
 
         // 選取並回傳指標所選取最上面的形狀的index

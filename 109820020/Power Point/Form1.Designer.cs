@@ -35,6 +35,7 @@ namespace Power_Point
             this._dataColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._dataGroupBox = new System.Windows.Forms.GroupBox();
             this._splitContainerData = new System.Windows.Forms.SplitContainer();
+            this._shapeDropDownList = new System.Windows.Forms.ComboBox();
             this._addShapeButton = new System.Windows.Forms.Button();
             this._menu = new System.Windows.Forms.MenuStrip();
             this._menuDescription = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +45,10 @@ namespace Power_Point
             this._toolRectangle = new System.Windows.Forms.ToolStripButton();
             this._toolCircle = new System.Windows.Forms.ToolStripButton();
             this._toolPointer = new System.Windows.Forms.ToolStripButton();
+            this._toolUndo = new System.Windows.Forms.ToolStripButton();
+            this._toolRedo = new System.Windows.Forms.ToolStripButton();
             this._splitContainerAll = new System.Windows.Forms.SplitContainer();
             this._splitContainerRight = new System.Windows.Forms.SplitContainer();
-            this._shapeDropDownList = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this._shapeDataGridView)).BeginInit();
             this._dataGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainerData)).BeginInit();
@@ -79,7 +81,7 @@ namespace Power_Point
             this._shapeDataGridView.RowHeadersVisible = false;
             this._shapeDataGridView.RowHeadersWidth = 82;
             this._shapeDataGridView.RowTemplate.Height = 38;
-            this._shapeDataGridView.Size = new System.Drawing.Size(350, 253);
+            this._shapeDataGridView.Size = new System.Drawing.Size(196, 370);
             this._shapeDataGridView.TabIndex = 3;
             this._shapeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteShapeClick);
             // 
@@ -124,7 +126,7 @@ namespace Power_Point
             this._dataGroupBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this._dataGroupBox.Name = "_dataGroupBox";
             this._dataGroupBox.Padding = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this._dataGroupBox.Size = new System.Drawing.Size(372, 344);
+            this._dataGroupBox.Size = new System.Drawing.Size(218, 461);
             this._dataGroupBox.TabIndex = 4;
             this._dataGroupBox.TabStop = false;
             this._dataGroupBox.Text = "資料顯示";
@@ -149,9 +151,23 @@ namespace Power_Point
             this._splitContainerData.Panel2.Controls.Add(this._shapeDataGridView);
             this._splitContainerData.Panel2.Padding = new System.Windows.Forms.Padding(10);
             this._splitContainerData.Panel2MinSize = 0;
-            this._splitContainerData.Size = new System.Drawing.Size(370, 322);
+            this._splitContainerData.Size = new System.Drawing.Size(216, 439);
             this._splitContainerData.SplitterDistance = 45;
             this._splitContainerData.TabIndex = 4;
+            // 
+            // _shapeDropDownList
+            // 
+            this._shapeDropDownList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._shapeDropDownList.FormattingEnabled = true;
+            this._shapeDropDownList.Items.AddRange(new object[] {
+            "線",
+            "矩形",
+            "圓"});
+            this._shapeDropDownList.Location = new System.Drawing.Point(95, 13);
+            this._shapeDropDownList.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this._shapeDropDownList.Name = "_shapeDropDownList";
+            this._shapeDropDownList.Size = new System.Drawing.Size(114, 23);
+            this._shapeDropDownList.TabIndex = 1;
             // 
             // _addShapeButton
             // 
@@ -171,7 +187,7 @@ namespace Power_Point
             this._menuDescription});
             this._menu.Location = new System.Drawing.Point(0, 0);
             this._menu.Name = "_menu";
-            this._menu.Size = new System.Drawing.Size(871, 27);
+            this._menu.Size = new System.Drawing.Size(1067, 27);
             this._menu.TabIndex = 5;
             this._menu.Text = "menu";
             // 
@@ -196,11 +212,13 @@ namespace Power_Point
             this._toolLine,
             this._toolRectangle,
             this._toolCircle,
-            this._toolPointer});
+            this._toolPointer,
+            this._toolUndo,
+            this._toolRedo});
             this._toolBar.Location = new System.Drawing.Point(0, 27);
             this._toolBar.Name = "_toolBar";
             this._toolBar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this._toolBar.Size = new System.Drawing.Size(871, 27);
+            this._toolBar.Size = new System.Drawing.Size(1067, 27);
             this._toolBar.TabIndex = 6;
             this._toolBar.Text = "toolStrip1";
             // 
@@ -248,6 +266,30 @@ namespace Power_Point
             this._toolPointer.ToolTipText = "Pointer";
             this._toolPointer.Click += new System.EventHandler(this.ToolPointerClick);
             // 
+            // _toolUndo
+            // 
+            this._toolUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolUndo.Enabled = false;
+            this._toolUndo.Image = global::Power_Point.Properties.Resources.Undo;
+            this._toolUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolUndo.Name = "_toolUndo";
+            this._toolUndo.Size = new System.Drawing.Size(29, 24);
+            this._toolUndo.Text = "Undo";
+            this._toolUndo.ToolTipText = "Circle";
+            this._toolUndo.Click += new System.EventHandler(this.ToolUndoClick);
+            // 
+            // _toolRedo
+            // 
+            this._toolRedo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolRedo.Enabled = false;
+            this._toolRedo.Image = global::Power_Point.Properties.Resources.Redo;
+            this._toolRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolRedo.Name = "_toolRedo";
+            this._toolRedo.Size = new System.Drawing.Size(29, 24);
+            this._toolRedo.Text = "Redo";
+            this._toolRedo.ToolTipText = "Circle";
+            this._toolRedo.Click += new System.EventHandler(this.ToolRedoClick);
+            // 
             // _splitContainerAll
             // 
             this._splitContainerAll.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -265,7 +307,7 @@ namespace Power_Point
             // _splitContainerAll.Panel2
             // 
             this._splitContainerAll.Panel2.Controls.Add(this._splitContainerRight);
-            this._splitContainerAll.Size = new System.Drawing.Size(871, 360);
+            this._splitContainerAll.Size = new System.Drawing.Size(1067, 477);
             this._splitContainerAll.SplitterDistance = 125;
             this._splitContainerAll.TabIndex = 7;
             this._splitContainerAll.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerRightSplitterMoved);
@@ -288,29 +330,15 @@ namespace Power_Point
             this._splitContainerRight.Panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this._splitContainerRight.Panel2.Controls.Add(this._dataGroupBox);
             this._splitContainerRight.Panel2.Padding = new System.Windows.Forms.Padding(8);
-            this._splitContainerRight.Size = new System.Drawing.Size(742, 360);
-            this._splitContainerRight.SplitterDistance = 350;
+            this._splitContainerRight.Size = new System.Drawing.Size(938, 477);
+            this._splitContainerRight.SplitterDistance = 700;
             this._splitContainerRight.TabIndex = 5;
-            // 
-            // _shapeDropDownList
-            // 
-            this._shapeDropDownList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._shapeDropDownList.FormattingEnabled = true;
-            this._shapeDropDownList.Items.AddRange(new object[] {
-            "線",
-            "矩形",
-            "圓"});
-            this._shapeDropDownList.Location = new System.Drawing.Point(95, 13);
-            this._shapeDropDownList.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this._shapeDropDownList.Name = "_shapeDropDownList";
-            this._shapeDropDownList.Size = new System.Drawing.Size(114, 23);
-            this._shapeDropDownList.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 414);
+            this.ClientSize = new System.Drawing.Size(1067, 531);
             this.Controls.Add(this._splitContainerAll);
             this.Controls.Add(this._toolBar);
             this.Controls.Add(this._menu);
@@ -359,6 +387,8 @@ namespace Power_Point
         private System.Windows.Forms.DataGridViewTextBoxColumn _dataColumn;
         private System.Windows.Forms.SplitContainer _splitContainerData;
         private System.Windows.Forms.ComboBox _shapeDropDownList;
+        private System.Windows.Forms.ToolStripButton _toolUndo;
+        private System.Windows.Forms.ToolStripButton _toolRedo;
     }
 }
 
