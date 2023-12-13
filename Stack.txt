@@ -42,4 +42,11 @@ Dialogs:
 		跳出視窗後，原來的不能用，要等上面的關掉
 OK and Cancel button, DialogResult, ShowDialog
 	Modeless Dialog
+
+
+
+
+_dataGroupBox.Size = new System.Drawing.Size(595, 1349);
+https://learn.microsoft.com/zh-tw/dotnet/api/system.windows.forms.splitcontainer.splittermoved?view=netframework-4.7.2
+
     
