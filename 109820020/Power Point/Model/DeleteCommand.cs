@@ -7,31 +7,33 @@ using System.Diagnostics;
 
 namespace Power_Point
 {
-    public class DrawCommand : ICommand
+    public class DeleteCommand : ICommand
     {
         private Model _model;
         private Shape _shape;
         private int _shapeIndex;
 
-        public DrawCommand(Model model, Shape shape)
+        public DeleteCommand(Model model, int index)
         {
             _model = model;
-            _shape = shape;
-            _shapeIndex = -1;
+            _shape = null;
+            _shapeIndex = index;
         }
 
         // 執行
         public void Execute()
         {
+            Debug.Assert(_shapeIndex >= 0);
+            _shape = _model.GetShape(_shapeIndex);
             Debug.Assert(_shape != null);
-            _shapeIndex = _model.AddShape(_shape);
+            _model.DeleteShape(_shapeIndex);
         }
 
         // 回復
         public void Unexecute()
         {
-            Debug.Assert(_shapeIndex >= 0);
-            _model.DeleteShape(_shapeIndex);
+            Debug.Assert(_shape != null);
+            _model.InsertShape(_shape, _shapeIndex);
         }
     }
 }

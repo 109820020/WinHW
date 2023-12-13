@@ -70,6 +70,18 @@ namespace Power_Point
             return index;
         }
 
+        // 取得形狀
+        public Shape GetShape(int index)
+        {
+            return _shapeList[index];
+        }
+
+        // 插入形狀
+        public void InsertShape(Shape shape, int index)
+        {
+            _shapeList.Insert(index, shape);
+        }
+
         // 移動形狀by位移
         public void MoveShape(int index, int offsetX, int offsetY)
         {

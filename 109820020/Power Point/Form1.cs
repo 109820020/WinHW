@@ -94,13 +94,13 @@ namespace Power_Point
         private void AddButtonClick(object sender, EventArgs e)
         {
             string shape = _shapeDropDownList.SelectedItem.ToString();
-            _model.AddShapeToCmdManager(shape);
+            _model.AddShapeToCommandManager(shape);
         }
 
         // 刪除形狀按鈕
         private void DeleteShapeClick(object sender, DataGridViewCellEventArgs e)
         {
-            _model.DeleteShape(e.RowIndex);
+            _model.DeleteShapeToCommandManager(e.RowIndex);
         }
 
         // 工具列線按下

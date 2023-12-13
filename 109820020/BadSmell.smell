@@ -188,7 +188,391 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Power Point\Model\Factory.cs on line 27.</SmellType>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.Form1.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>2</Id>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.Form1.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>32</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>3</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.Form1.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>4</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.Form1.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>5</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.CanvasSetLocationAndSize.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>75</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>6</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.Form1.3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>7</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.Form1.3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
+              <SmellType>Literal constants(字面常數)-9</SmellType>
+              <HashCode>LiteralConstants.CanvasSetLocationAndSize.9</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>74</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>9</Id>
+              <SmellType>Literal constants(字面常數)-9</SmellType>
+              <HashCode>LiteralConstants.SplitContainerAllSplitterMoved.9</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>172</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>10</Id>
+              <SmellType>Literal constants(字面常數)-9</SmellType>
+              <HashCode>LiteralConstants.SplitContainerRightSplitterMoved.9</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>182</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>11</Id>
+              <SmellType>Literal constants(字面常數)-16</SmellType>
+              <HashCode>LiteralConstants.CanvasSetLocationAndSize.16</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>74</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>Literal constants(字面常數)-16</SmellType>
+              <HashCode>LiteralConstants.SplitContainerAllSplitterMoved.16</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>172</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
+              <SmellType>Literal constants(字面常數)-16</SmellType>
+              <HashCode>LiteralConstants.SplitContainerRightSplitterMoved.16</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>182</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>14</Id>
+              <SmellType>Literal constants(字面常數)-10</SmellType>
+              <HashCode>LiteralConstants.CanvasSetLocationAndSize.10</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>78</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>15</Id>
+              <SmellType>Literal constants(字面常數)-10</SmellType>
+              <HashCode>LiteralConstants.SplitContainerAllSplitterMoved.10</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>171</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>16</Id>
+              <SmellType>Literal constants(字面常數)-10</SmellType>
+              <HashCode>LiteralConstants.SplitContainerRightSplitterMoved.10</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>181</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>17</Id>
+              <SmellType>Unsuitable naming(名不符實)-SplitContainerAllSplitterMoved(splitter)</SmellType>
+              <HashCode>UnsuitableNaming.Form1.SplitContainerAllSplitterMoved.SplitContainerAllSplitterMoved</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>167</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>18</Id>
+              <SmellType>Unsuitable naming(名不符實)-SplitContainerRightSplitterMoved(splitter)</SmellType>
+              <HashCode>UnsuitableNaming.Form1.SplitContainerRightSplitterMoved.SplitContainerRightSplitterMoved</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>Form1.cs</File>
+              <Line>177</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>19</Id>
+              <SmellType>Unsuitable naming(名不符實)-Unexecute(unexecute)</SmellType>
+              <HashCode>UnsuitableNaming.AddCommand.Unexecute.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>AddCommand.cs</File>
+              <Line>36</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>20</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.AddCommand.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>AddCommand.cs</File>
+              <Line>36</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>21</Id>
+              <SmellType>Unsuitable naming(名不符實)-Unexecute(unexecute)</SmellType>
+              <HashCode>UnsuitableNaming.DeleteCommand.Unexecute.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>DeleteCommand.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>22</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DeleteCommand.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>DeleteCommand.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>23</Id>
+              <SmellType>Unsuitable naming(名不符實)-Unexecute(unexecute)</SmellType>
+              <HashCode>UnsuitableNaming.DrawCommand.Unexecute.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>DrawCommand.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>24</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DrawCommand.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>DrawCommand.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>25</Id>
+              <SmellType>A syntax error has been discovered in file D:\學\大四\視窗\視窗HW\109820020\Power Point\Model\Factory.cs on line 27.</SmellType>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>Power Point</Project>
@@ -202,7 +586,39 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>2</Id>
+              <Id>26</Id>
+              <SmellType>Unsuitable naming(名不符實)-Unexecute(unexecute)</SmellType>
+              <HashCode>UnsuitableNaming.ICommand.Unexecute.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>ICommand.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>27</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.ICommand.Unexecute</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>Power Point</Project>
+              <File>ICommand.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>28</Id>
               <SmellType>Literal constants(字面常數)-"Red"</SmellType>
               <HashCode>LiteralConstants.DrawLine."Red"</HashCode>
               <Severity>Red</Severity>
@@ -218,7 +634,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>3</Id>
+              <Id>29</Id>
               <SmellType>Literal constants(字面常數)-"Red"</SmellType>
               <HashCode>LiteralConstants.DrawRectangle."Red"</HashCode>
               <Severity>Red</Severity>
@@ -234,7 +650,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>4</Id>
+              <Id>30</Id>
               <SmellType>Literal constants(字面常數)-"Red"</SmellType>
               <HashCode>LiteralConstants.DrawCircle."Red"</HashCode>
               <Severity>Red</Severity>
@@ -250,7 +666,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>5</Id>
+              <Id>31</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.IGraphics.DrawLine.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -266,7 +682,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>6</Id>
+              <Id>32</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.IGraphics.DrawRectangle.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -282,7 +698,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>7</Id>
+              <Id>33</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.IGraphics.DrawCircle.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -298,7 +714,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>8</Id>
+              <Id>34</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.FormGraphicsAdapter.DrawLine.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -314,7 +730,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>9</Id>
+              <Id>35</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.FormGraphicsAdapter.DrawRectangle.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -330,7 +746,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>10</Id>
+              <Id>36</Id>
               <SmellType>Long parameter list(過長參數列)</SmellType>
               <HashCode>LongParameterList.FormGraphicsAdapter.DrawCircle.int x1;int y1;int x2;int y2;string color;</HashCode>
               <Severity>Warning</Severity>
@@ -377,6 +793,11 @@
                 <AnalysisFileType>Designer</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\AddCommand.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\Circle.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
@@ -387,12 +808,32 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\CommandManager.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\DeleteCommand.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\DrawCommand.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\DrawingState.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\Factory.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Model\ICommand.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
@@ -553,7 +994,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1446</ProductionLoc>
+          <ProductionLoc>1889</ProductionLoc>
           <TestLoc>940</TestLoc>
         </CodeReview>
       </Data>

@@ -68,7 +68,7 @@ namespace Power_Point
         // 新增隨機形狀到 CmdManager
         public void AddShapeToCommandManager(string shapeName)
         {
-            _commandManager.Execute(new DrawCommand(this, shapeName));
+            _commandManager.Execute(new AddCommand(this, shapeName));
         }
 
         // 新增形狀 回傳形狀index
@@ -84,6 +84,12 @@ namespace Power_Point
         {
             _shapes.DeleteShape(index);
             NotifyModelChanged();
+        }
+
+        // 刪除形狀
+        public void DeleteShapeToCommandManager(int index)
+        {
+            _commandManager.Execute(new DeleteCommand(this, index));
         }
 
         // ChangeState
@@ -142,6 +148,19 @@ namespace Power_Point
         public int SelectShape(int pointX, int pointY)
         {
             return _shapes.SelectShape(pointX, pointY);
+        }
+
+        // 取得形狀
+        public Shape GetShape(int index)
+        {
+            return _shapes.GetShape(index);
+        }
+
+        // 插入形狀
+        public void InsertShape(Shape shape, int index)
+        {
+            _shapes.InsertShape(shape, index);
+            NotifyModelChanged();
         }
 
         // 移動形狀by位移

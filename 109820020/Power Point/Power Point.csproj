@@ -65,6 +65,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Model\CircleState.cs" />
+    <Compile Include="Model\AddCommand.cs" />
+    <Compile Include="Model\DeleteCommand.cs" />
     <Compile Include="Model\DrawCommand.cs" />
     <Compile Include="Model\ICommand.cs" />
     <Compile Include="Model\RectangleState.cs" />

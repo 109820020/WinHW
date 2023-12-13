@@ -59,7 +59,7 @@ namespace Power_Point
             if (_selectedIndex >= 0)
             {
                 if (key == KEY_DELETE)
-                    _model.DeleteShape(_selectedIndex);
+                    _model.CommandManager.Execute(new DeleteCommand(_model, _selectedIndex));
             }
         }
 
