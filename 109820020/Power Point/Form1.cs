@@ -183,6 +183,21 @@ namespace Power_Point
             }
         }
 
+        // SplitContainerRight Splitter 移動時
+        public void ResizeHandler(Object sender, EventArgs e)
+        {
+            if (_canvas != null)
+            {
+                CanvasSetLocationAndSize();
+            }
+            if (_button1 != null)
+            {
+                _button1.Width = _splitContainerAll.Panel1.Width - 10;
+                _button1.Height = _button1.Width * 9 / 16;
+            }
+            
+        }
+
         // Undo
         private void ToolUndoClick(object sender, EventArgs e)
         {

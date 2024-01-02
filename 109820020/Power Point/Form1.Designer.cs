@@ -75,13 +75,13 @@ namespace Power_Point
             this._shapeColumn,
             this._dataColumn});
             this._shapeDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._shapeDataGridView.Location = new System.Drawing.Point(10, 10);
-            this._shapeDataGridView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this._shapeDataGridView.Location = new System.Drawing.Point(16, 16);
+            this._shapeDataGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._shapeDataGridView.Name = "_shapeDataGridView";
             this._shapeDataGridView.RowHeadersVisible = false;
             this._shapeDataGridView.RowHeadersWidth = 82;
             this._shapeDataGridView.RowTemplate.Height = 38;
-            this._shapeDataGridView.Size = new System.Drawing.Size(196, 370);
+            this._shapeDataGridView.Size = new System.Drawing.Size(172, 608);
             this._shapeDataGridView.TabIndex = 3;
             this._shapeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteShapeClick);
             // 
@@ -95,7 +95,7 @@ namespace Power_Point
             this._deleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this._deleteColumn.Text = "刪除";
             this._deleteColumn.UseColumnTextForButtonValue = true;
-            this._deleteColumn.Width = 43;
+            this._deleteColumn.Width = 64;
             // 
             // _shapeColumn
             // 
@@ -106,7 +106,7 @@ namespace Power_Point
             this._shapeColumn.Name = "_shapeColumn";
             this._shapeColumn.ReadOnly = true;
             this._shapeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this._shapeColumn.Width = 66;
+            this._shapeColumn.Width = 103;
             // 
             // _dataColumn
             // 
@@ -122,11 +122,11 @@ namespace Power_Point
             // 
             this._dataGroupBox.Controls.Add(this._splitContainerData);
             this._dataGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._dataGroupBox.Location = new System.Drawing.Point(8, 8);
-            this._dataGroupBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this._dataGroupBox.Location = new System.Drawing.Point(13, 13);
+            this._dataGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._dataGroupBox.Name = "_dataGroupBox";
-            this._dataGroupBox.Padding = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this._dataGroupBox.Size = new System.Drawing.Size(218, 461);
+            this._dataGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._dataGroupBox.Size = new System.Drawing.Size(208, 726);
             this._dataGroupBox.TabIndex = 4;
             this._dataGroupBox.TabStop = false;
             this._dataGroupBox.Text = "資料顯示";
@@ -136,7 +136,8 @@ namespace Power_Point
             this._splitContainerData.Dock = System.Windows.Forms.DockStyle.Fill;
             this._splitContainerData.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this._splitContainerData.IsSplitterFixed = true;
-            this._splitContainerData.Location = new System.Drawing.Point(1, 20);
+            this._splitContainerData.Location = new System.Drawing.Point(2, 32);
+            this._splitContainerData.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this._splitContainerData.Name = "_splitContainerData";
             this._splitContainerData.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -149,10 +150,11 @@ namespace Power_Point
             // _splitContainerData.Panel2
             // 
             this._splitContainerData.Panel2.Controls.Add(this._shapeDataGridView);
-            this._splitContainerData.Panel2.Padding = new System.Windows.Forms.Padding(10);
+            this._splitContainerData.Panel2.Padding = new System.Windows.Forms.Padding(16, 16, 16, 16);
             this._splitContainerData.Panel2MinSize = 0;
-            this._splitContainerData.Size = new System.Drawing.Size(216, 439);
+            this._splitContainerData.Size = new System.Drawing.Size(204, 691);
             this._splitContainerData.SplitterDistance = 45;
+            this._splitContainerData.SplitterWidth = 6;
             this._splitContainerData.TabIndex = 4;
             // 
             // _shapeDropDownList
@@ -163,18 +165,18 @@ namespace Power_Point
             "線",
             "矩形",
             "圓"});
-            this._shapeDropDownList.Location = new System.Drawing.Point(95, 13);
-            this._shapeDropDownList.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this._shapeDropDownList.Location = new System.Drawing.Point(154, 21);
+            this._shapeDropDownList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._shapeDropDownList.Name = "_shapeDropDownList";
-            this._shapeDropDownList.Size = new System.Drawing.Size(114, 23);
+            this._shapeDropDownList.Size = new System.Drawing.Size(183, 32);
             this._shapeDropDownList.TabIndex = 1;
             // 
             // _addShapeButton
             // 
-            this._addShapeButton.Location = new System.Drawing.Point(13, 13);
-            this._addShapeButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this._addShapeButton.Location = new System.Drawing.Point(21, 21);
+            this._addShapeButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._addShapeButton.Name = "_addShapeButton";
-            this._addShapeButton.Size = new System.Drawing.Size(58, 32);
+            this._addShapeButton.Size = new System.Drawing.Size(94, 51);
             this._addShapeButton.TabIndex = 0;
             this._addShapeButton.Text = "新增";
             this._addShapeButton.UseVisualStyleBackColor = true;
@@ -182,12 +184,14 @@ namespace Power_Point
             // 
             // _menu
             // 
+            this._menu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this._menu.ImageScalingSize = new System.Drawing.Size(32, 32);
             this._menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._menuDescription});
             this._menu.Location = new System.Drawing.Point(0, 0);
             this._menu.Name = "_menu";
-            this._menu.Size = new System.Drawing.Size(1067, 27);
+            this._menu.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
+            this._menu.Size = new System.Drawing.Size(1734, 48);
             this._menu.TabIndex = 5;
             this._menu.Text = "menu";
             // 
@@ -196,13 +200,13 @@ namespace Power_Point
             this._menuDescription.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._menuAbout});
             this._menuDescription.Name = "_menuDescription";
-            this._menuDescription.Size = new System.Drawing.Size(53, 23);
+            this._menuDescription.Size = new System.Drawing.Size(81, 42);
             this._menuDescription.Text = "說明";
             // 
             // _menuAbout
             // 
             this._menuAbout.Name = "_menuAbout";
-            this._menuAbout.Size = new System.Drawing.Size(122, 26);
+            this._menuAbout.Size = new System.Drawing.Size(193, 44);
             this._menuAbout.Text = "關於";
             // 
             // _toolBar
@@ -215,10 +219,10 @@ namespace Power_Point
             this._toolPointer,
             this._toolUndo,
             this._toolRedo});
-            this._toolBar.Location = new System.Drawing.Point(0, 27);
+            this._toolBar.Location = new System.Drawing.Point(0, 48);
             this._toolBar.Name = "_toolBar";
-            this._toolBar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this._toolBar.Size = new System.Drawing.Size(1067, 27);
+            this._toolBar.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this._toolBar.Size = new System.Drawing.Size(1734, 50);
             this._toolBar.TabIndex = 6;
             this._toolBar.Text = "toolStrip1";
             // 
@@ -228,7 +232,7 @@ namespace Power_Point
             this._toolLine.Image = global::Power_Point.Properties.Resources.Line;
             this._toolLine.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolLine.Name = "_toolLine";
-            this._toolLine.Size = new System.Drawing.Size(29, 24);
+            this._toolLine.Size = new System.Drawing.Size(46, 44);
             this._toolLine.Text = "Line";
             this._toolLine.ToolTipText = "Line";
             this._toolLine.Click += new System.EventHandler(this.ToolLineClick);
@@ -239,7 +243,7 @@ namespace Power_Point
             this._toolRectangle.Image = global::Power_Point.Properties.Resources.Rect;
             this._toolRectangle.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolRectangle.Name = "_toolRectangle";
-            this._toolRectangle.Size = new System.Drawing.Size(29, 24);
+            this._toolRectangle.Size = new System.Drawing.Size(46, 44);
             this._toolRectangle.Text = "Rectangle";
             this._toolRectangle.ToolTipText = "Rectangle";
             this._toolRectangle.Click += new System.EventHandler(this.ToolRectangleClick);
@@ -250,7 +254,7 @@ namespace Power_Point
             this._toolCircle.Image = global::Power_Point.Properties.Resources.Circle;
             this._toolCircle.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolCircle.Name = "_toolCircle";
-            this._toolCircle.Size = new System.Drawing.Size(29, 24);
+            this._toolCircle.Size = new System.Drawing.Size(46, 44);
             this._toolCircle.Text = "Circle";
             this._toolCircle.ToolTipText = "Circle";
             this._toolCircle.Click += new System.EventHandler(this.ToolCircleClick);
@@ -261,7 +265,7 @@ namespace Power_Point
             this._toolPointer.Image = global::Power_Point.Properties.Resources.Pointer;
             this._toolPointer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolPointer.Name = "_toolPointer";
-            this._toolPointer.Size = new System.Drawing.Size(29, 24);
+            this._toolPointer.Size = new System.Drawing.Size(46, 44);
             this._toolPointer.Text = "toolStripButton1";
             this._toolPointer.ToolTipText = "Pointer";
             this._toolPointer.Click += new System.EventHandler(this.ToolPointerClick);
@@ -273,7 +277,7 @@ namespace Power_Point
             this._toolUndo.Image = global::Power_Point.Properties.Resources.Undo;
             this._toolUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolUndo.Name = "_toolUndo";
-            this._toolUndo.Size = new System.Drawing.Size(29, 24);
+            this._toolUndo.Size = new System.Drawing.Size(46, 44);
             this._toolUndo.Text = "Undo";
             this._toolUndo.ToolTipText = "Circle";
             this._toolUndo.Click += new System.EventHandler(this.ToolUndoClick);
@@ -285,7 +289,7 @@ namespace Power_Point
             this._toolRedo.Image = global::Power_Point.Properties.Resources.Redo;
             this._toolRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._toolRedo.Name = "_toolRedo";
-            this._toolRedo.Size = new System.Drawing.Size(29, 24);
+            this._toolRedo.Size = new System.Drawing.Size(46, 44);
             this._toolRedo.Text = "Redo";
             this._toolRedo.ToolTipText = "Circle";
             this._toolRedo.Click += new System.EventHandler(this.ToolRedoClick);
@@ -295,56 +299,57 @@ namespace Power_Point
             this._splitContainerAll.BackColor = System.Drawing.SystemColors.ScrollBar;
             this._splitContainerAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this._splitContainerAll.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this._splitContainerAll.Location = new System.Drawing.Point(0, 54);
-            this._splitContainerAll.Margin = new System.Windows.Forms.Padding(2);
+            this._splitContainerAll.Location = new System.Drawing.Point(0, 98);
             this._splitContainerAll.Name = "_splitContainerAll";
             // 
             // _splitContainerAll.Panel1
             // 
             this._splitContainerAll.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this._splitContainerAll.Panel1.Padding = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this._splitContainerAll.Panel1.Padding = new System.Windows.Forms.Padding(10, 14, 10, 14);
             // 
             // _splitContainerAll.Panel2
             // 
             this._splitContainerAll.Panel2.Controls.Add(this._splitContainerRight);
-            this._splitContainerAll.Size = new System.Drawing.Size(1067, 477);
+            this._splitContainerAll.Size = new System.Drawing.Size(1734, 752);
             this._splitContainerAll.SplitterDistance = 125;
+            this._splitContainerAll.SplitterWidth = 6;
             this._splitContainerAll.TabIndex = 7;
-            this._splitContainerAll.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerRightSplitterMoved);
+            this._splitContainerAll.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerAllSplitterMoved);
             // 
             // _splitContainerRight
             // 
             this._splitContainerRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this._splitContainerRight.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this._splitContainerRight.Location = new System.Drawing.Point(0, 0);
-            this._splitContainerRight.Margin = new System.Windows.Forms.Padding(2);
             this._splitContainerRight.Name = "_splitContainerRight";
             // 
             // _splitContainerRight.Panel1
             // 
             this._splitContainerRight.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this._splitContainerRight.Panel1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this._splitContainerRight.Panel1.Padding = new System.Windows.Forms.Padding(10, 13, 10, 13);
             // 
             // _splitContainerRight.Panel2
             // 
             this._splitContainerRight.Panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this._splitContainerRight.Panel2.Controls.Add(this._dataGroupBox);
-            this._splitContainerRight.Panel2.Padding = new System.Windows.Forms.Padding(8);
-            this._splitContainerRight.Size = new System.Drawing.Size(938, 477);
-            this._splitContainerRight.SplitterDistance = 700;
+            this._splitContainerRight.Panel2.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this._splitContainerRight.Size = new System.Drawing.Size(1603, 752);
+            this._splitContainerRight.SplitterDistance = 1363;
+            this._splitContainerRight.SplitterWidth = 6;
             this._splitContainerRight.TabIndex = 5;
+            this._splitContainerRight.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerRightSplitterMoved);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 531);
+            this.ClientSize = new System.Drawing.Size(1734, 850);
             this.Controls.Add(this._splitContainerAll);
             this.Controls.Add(this._toolBar);
             this.Controls.Add(this._menu);
             this.KeyPreview = true;
             this.MainMenuStrip = this._menu;
-            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Form1";
             this.Text = "Power Point";
             ((System.ComponentModel.ISupportInitialize)(this._shapeDataGridView)).EndInit();
@@ -363,6 +368,7 @@ namespace Power_Point
             this._splitContainerRight.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._splitContainerRight)).EndInit();
             this._splitContainerRight.ResumeLayout(false);
+            this.Resize += new System.EventHandler(this.ResizeHandler);
             this.ResumeLayout(false);
             this.PerformLayout();
 
