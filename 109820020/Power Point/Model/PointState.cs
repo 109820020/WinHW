@@ -43,10 +43,14 @@ namespace Power_Point
         // MouseMove
         public void MouseMove(int pointX, int pointY)
         {
-            if (_isMouseDown && _selectedIndex >= 0)
+            if (_selectedIndex >= 0 && _isMouseDown)
             {
                 _model.MoveShape(_selectedIndex, pointX, pointY);
             }
+            //else if (_selectedIndex >= 0 && !_isMouseDown)
+            //{
+                
+            //}
         }
 
         // MouseUp

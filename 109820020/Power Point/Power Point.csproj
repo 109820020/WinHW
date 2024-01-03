@@ -82,6 +82,7 @@
     <Compile Include="Model\Circle.cs" />
     <Compile Include="Model\Rectangle.cs" />
     <Compile Include="Model\CommandManager.cs" />
+    <Compile Include="Model\Pages.cs" />
     <Compile Include="Model\Shapes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -138,6 +139,7 @@
     <None Include="Properties\Resources\Rect.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Resources\Add.png" />
     <Content Include="Properties\Resources\Line.png" />
     <None Include="Properties\Resources\Redo.png" />
     <None Include="Properties\Resources\Undo.png" />

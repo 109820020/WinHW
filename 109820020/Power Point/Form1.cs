@@ -139,6 +139,26 @@ namespace Power_Point
             RefreshControls();
         }
 
+        // 工具列新增頁面按下
+        private void ToolAddClick(object sender, EventArgs e)
+        {
+            _model.AddPage();
+        }
+
+        // 工具列Undo
+        private void ToolUndoClick(object sender, EventArgs e)
+        {
+            _model.Undo();
+            RefreshControls();
+        }
+
+        // 工具列Redo
+        private void ToolRedoClick(object sender, EventArgs e)
+        {
+            _model.Redo();
+            RefreshControls();
+        }
+
         // 在畫布中按下左鍵
         public void HandleCanvasPressed(object sender, System.Windows.Forms.MouseEventArgs e)
         {
@@ -209,20 +229,6 @@ namespace Power_Point
                 _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
                 Invalidate(true);
             }
-        }
-
-        // Undo
-        private void ToolUndoClick(object sender, EventArgs e)
-        {
-            _model.Undo();
-            RefreshControls();
-        }
-
-        // Redo
-        private void ToolRedoClick(object sender, EventArgs e)
-        {
-            _model.Redo();
-            RefreshControls();
         }
     }
 }

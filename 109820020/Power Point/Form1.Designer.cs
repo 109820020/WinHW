@@ -41,16 +41,16 @@ namespace Power_Point
             this._menuDescription = new System.Windows.Forms.ToolStripMenuItem();
             this._menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this._toolBar = new System.Windows.Forms.ToolStrip();
+            this._splitContainerAll = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this._splitContainerRight = new System.Windows.Forms.SplitContainer();
             this._toolLine = new System.Windows.Forms.ToolStripButton();
             this._toolRectangle = new System.Windows.Forms.ToolStripButton();
             this._toolCircle = new System.Windows.Forms.ToolStripButton();
             this._toolPointer = new System.Windows.Forms.ToolStripButton();
+            this._toolAdd = new System.Windows.Forms.ToolStripButton();
             this._toolUndo = new System.Windows.Forms.ToolStripButton();
             this._toolRedo = new System.Windows.Forms.ToolStripButton();
-            this._splitContainerAll = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this._splitContainerRight = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this._shapeDataGridView)).BeginInit();
             this._dataGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainerData)).BeginInit();
@@ -63,7 +63,6 @@ namespace Power_Point
             this._splitContainerAll.Panel1.SuspendLayout();
             this._splitContainerAll.Panel2.SuspendLayout();
             this._splitContainerAll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainerRight)).BeginInit();
             this._splitContainerRight.Panel2.SuspendLayout();
             this._splitContainerRight.SuspendLayout();
@@ -110,7 +109,7 @@ namespace Power_Point
             this._shapeColumn.Name = "_shapeColumn";
             this._shapeColumn.ReadOnly = true;
             this._shapeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this._shapeColumn.Width = 62;
+            this._shapeColumn.Width = 66;
             // 
             // _dataColumn
             // 
@@ -217,6 +216,7 @@ namespace Power_Point
             this._toolRectangle,
             this._toolCircle,
             this._toolPointer,
+            this._toolAdd,
             this._toolUndo,
             this._toolRedo});
             this._toolBar.Location = new System.Drawing.Point(0, 27);
@@ -225,6 +225,61 @@ namespace Power_Point
             this._toolBar.Size = new System.Drawing.Size(1067, 27);
             this._toolBar.TabIndex = 6;
             this._toolBar.Text = "toolStrip1";
+            // 
+            // _splitContainerAll
+            // 
+            this._splitContainerAll.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this._splitContainerAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._splitContainerAll.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this._splitContainerAll.Location = new System.Drawing.Point(0, 54);
+            this._splitContainerAll.Margin = new System.Windows.Forms.Padding(2);
+            this._splitContainerAll.Name = "_splitContainerAll";
+            // 
+            // _splitContainerAll.Panel1
+            // 
+            this._splitContainerAll.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this._splitContainerAll.Panel1.Controls.Add(this.button1);
+            this._splitContainerAll.Panel1.Padding = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            // 
+            // _splitContainerAll.Panel2
+            // 
+            this._splitContainerAll.Panel2.Controls.Add(this._splitContainerRight);
+            this._splitContainerAll.Size = new System.Drawing.Size(1067, 477);
+            this._splitContainerAll.SplitterDistance = 125;
+            this._splitContainerAll.TabIndex = 7;
+            this._splitContainerAll.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerAllSplitterMoved);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(9, 280);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 106);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // _splitContainerRight
+            // 
+            this._splitContainerRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._splitContainerRight.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this._splitContainerRight.Location = new System.Drawing.Point(0, 0);
+            this._splitContainerRight.Margin = new System.Windows.Forms.Padding(2);
+            this._splitContainerRight.Name = "_splitContainerRight";
+            // 
+            // _splitContainerRight.Panel1
+            // 
+            this._splitContainerRight.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this._splitContainerRight.Panel1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            // 
+            // _splitContainerRight.Panel2
+            // 
+            this._splitContainerRight.Panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this._splitContainerRight.Panel2.Controls.Add(this._dataGroupBox);
+            this._splitContainerRight.Panel2.Padding = new System.Windows.Forms.Padding(8);
+            this._splitContainerRight.Size = new System.Drawing.Size(938, 477);
+            this._splitContainerRight.SplitterDistance = 698;
+            this._splitContainerRight.TabIndex = 5;
+            this._splitContainerRight.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerRightSplitterMoved);
             // 
             // _toolLine
             // 
@@ -270,6 +325,17 @@ namespace Power_Point
             this._toolPointer.ToolTipText = "Pointer";
             this._toolPointer.Click += new System.EventHandler(this.ToolPointerClick);
             // 
+            // _toolAdd
+            // 
+            this._toolAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._toolAdd.Image = global::Power_Point.Properties.Resources.Add;
+            this._toolAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._toolAdd.Name = "_toolAdd";
+            this._toolAdd.Size = new System.Drawing.Size(29, 24);
+            this._toolAdd.Text = "toolStripButton1";
+            this._toolAdd.ToolTipText = "Add";
+            this._toolAdd.Click += new System.EventHandler(this.ToolAddClick);
+            // 
             // _toolUndo
             // 
             this._toolUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -293,71 +359,6 @@ namespace Power_Point
             this._toolRedo.Text = "Redo";
             this._toolRedo.ToolTipText = "Circle";
             this._toolRedo.Click += new System.EventHandler(this.ToolRedoClick);
-            // 
-            // _splitContainerAll
-            // 
-            this._splitContainerAll.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this._splitContainerAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._splitContainerAll.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this._splitContainerAll.Location = new System.Drawing.Point(0, 54);
-            this._splitContainerAll.Margin = new System.Windows.Forms.Padding(2);
-            this._splitContainerAll.Name = "_splitContainerAll";
-            // 
-            // _splitContainerAll.Panel1
-            // 
-            this._splitContainerAll.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this._splitContainerAll.Panel1.Controls.Add(this.button1);
-            this._splitContainerAll.Panel1.Controls.Add(this.pictureBox1);
-            this._splitContainerAll.Panel1.Padding = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            // 
-            // _splitContainerAll.Panel2
-            // 
-            this._splitContainerAll.Panel2.Controls.Add(this._splitContainerRight);
-            this._splitContainerAll.Size = new System.Drawing.Size(1067, 477);
-            this._splitContainerAll.SplitterDistance = 125;
-            this._splitContainerAll.TabIndex = 7;
-            this._splitContainerAll.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerAllSplitterMoved);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 203);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 54);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // _splitContainerRight
-            // 
-            this._splitContainerRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._splitContainerRight.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this._splitContainerRight.Location = new System.Drawing.Point(0, 0);
-            this._splitContainerRight.Margin = new System.Windows.Forms.Padding(2);
-            this._splitContainerRight.Name = "_splitContainerRight";
-            // 
-            // _splitContainerRight.Panel1
-            // 
-            this._splitContainerRight.Panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this._splitContainerRight.Panel1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            // 
-            // _splitContainerRight.Panel2
-            // 
-            this._splitContainerRight.Panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this._splitContainerRight.Panel2.Controls.Add(this._dataGroupBox);
-            this._splitContainerRight.Panel2.Padding = new System.Windows.Forms.Padding(8);
-            this._splitContainerRight.Size = new System.Drawing.Size(938, 477);
-            this._splitContainerRight.SplitterDistance = 698;
-            this._splitContainerRight.TabIndex = 5;
-            this._splitContainerRight.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainerRightSplitterMoved);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 106);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -386,7 +387,6 @@ namespace Power_Point
             this._splitContainerAll.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._splitContainerAll)).EndInit();
             this._splitContainerAll.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this._splitContainerRight.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._splitContainerRight)).EndInit();
             this._splitContainerRight.ResumeLayout(false);
@@ -416,8 +416,8 @@ namespace Power_Point
         private System.Windows.Forms.ComboBox _shapeDropDownList;
         private System.Windows.Forms.ToolStripButton _toolUndo;
         private System.Windows.Forms.ToolStripButton _toolRedo;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripButton _toolAdd;
     }
 }
 

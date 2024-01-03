@@ -18,6 +18,7 @@ namespace Power_Point
         private const string CIRCLE = "Circle";
         private const string POINTER = "Pointer";
 
+        private Pages _pages;
         private Shapes _shapes;
         private IState _state;
         private PointState _pointState;
@@ -28,6 +29,7 @@ namespace Power_Point
 
         public Model()
         {
+            _pages = new Pages();
             _shapes = new Shapes();
 
             _pointState = new PointState(this);
@@ -70,6 +72,31 @@ namespace Power_Point
         {
             _commandManager.Execute(new AddCommand(this, shapeName));
         }
+
+
+
+
+
+        // 增加頁面
+        public void AddPage()
+        {
+            _pages.AddPage();
+            NotifyModelChanged();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // 新增形狀 回傳形狀index
         public int AddShape(Shape shape)
