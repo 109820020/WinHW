@@ -51,6 +51,8 @@ namespace Power_Point
             _shapeDataGridView.AutoGenerateColumns = false;
             _shapeDataGridView.DataSource = _model.Shapes;
 
+
+            this.Resize += new System.EventHandler(this.ResizeHandler);
             _shapeDropDownList.SelectedItem = "線";
             RefreshControls();
         }
