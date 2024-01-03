@@ -8,23 +8,29 @@ namespace Power_Point
 {
     public class PointState : IState
     {
-        private const string STATE_NAME = "Pointer";
+        private const string POINTER_STATE = "Pointer";
+        private const string SCALE_STATE = "Scale";
         private const string KEY_DELETE = "Delete";
         private Model _model;
         private bool _isMouseDown;
+        private bool _isScale;
         private int _selectedIndex;
 
         public PointState(Model model)
         {
             this._model = model;
             this._isMouseDown = false;
+            _isScale = false;
             this._selectedIndex = -1;
         }
 
         // GetStateName
         public string GetStateName()
         {
-            return STATE_NAME;
+            if (_isScale)
+                return SCALE_STATE;
+            else
+                return POINTER_STATE;
         }
 
         // MouseDown

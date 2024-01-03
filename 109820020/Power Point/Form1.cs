@@ -12,6 +12,9 @@ namespace Power_Point
 {
     public partial class Form1 : Form
     {
+        private const int CANVAS_RELATIVE_WIDTH = 1600;
+        private const int CANVAS_RELATIVE_HIGHT = 900;
+        //CanvasSetLocationAndSize();************************************************************************
         private Model _model;
         private FormPresentationModel _formPresentationModel;
         private Panel _canvas;
@@ -33,13 +36,16 @@ namespace Power_Point
             this._button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this._button1.Name = "_button1";
             this._button1.Size = new System.Drawing.Size(115, 65);
+            _formPresentationModel.SetButtonSize(_button1, _splitContainerAll.Panel1.Width);
             this._button1.UseVisualStyleBackColor = true;
             this._button1.Click += new System.EventHandler(this.Button1Click);
             this._splitContainerAll.Panel1.Controls.Add(this._button1);
 
             // prepare canvas
             _canvas = new DoubleBufferedPanel();
-            CanvasSetLocationAndSize();
+            _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width, 
+                _splitContainerRight.Panel1.Height);
+            _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
             _canvas.BackColor = System.Drawing.Color.White;
             _canvas.MouseDown += HandleCanvasPressed;
             _canvas.MouseUp += HandleCanvasReleased;
@@ -50,7 +56,10 @@ namespace Power_Point
             // _shapeDataGridView binding
             _shapeDataGridView.AutoGenerateColumns = false;
             _shapeDataGridView.DataSource = _model.Shapes;
-           
+
+            // 設定畫布相對大小
+            _formPresentationModel.SetCanvasRelativeSize(CANVAS_RELATIVE_WIDTH, CANVAS_RELATIVE_HIGHT);
+
             this.Resize += new System.EventHandler(this.ResizeHandler);
             _shapeDropDownList.SelectedItem = "線";
             RefreshControls();
@@ -66,25 +75,16 @@ namespace Power_Point
             _toolUndo.Enabled = _model.IsUndoEnabled();
             _toolRedo.Enabled = _model.IsRedoEnabled();
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
-            Bitmap bitmap = new Bitmap(_button1.Width, _button1.Height);
-            using (Graphics g = Graphics.FromImage(bitmap))
-            {
-                _formPresentationModel.Draw(g);
-            }
-            _button1.BackgroundImage = bitmap;
-            //**************************88888888
-        }
 
-        // canvas 座標Y值
-        private void CanvasSetLocationAndSize()
-        {
-            int canvasWidth = _splitContainerRight.Panel1.Width - 20;
-            int canvasHeight = canvasWidth * 9 / 16;
-            int canvasLocationY = (_splitContainerRight.Panel1.Height - canvasHeight) / 2;
-            canvasLocationY = canvasLocationY >= 0 ? canvasLocationY : 0;
+            // button縮圖
+            Bitmap bitmap = new Bitmap(_canvas.Width, _canvas.Height);
+            //using (Graphics graphic = Graphics.FromImage(bitmap))
+            //{
 
-            _canvas.Location = new System.Drawing.Point(10, canvasLocationY);
-            _canvas.Size = new System.Drawing.Size(canvasWidth, canvasHeight);
+            //}
+            _canvas.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, _canvas.Width, _canvas.Height));
+            Bitmap resizedBitmap = new Bitmap(bitmap, _button1.Width, _button1.Height);
+            _button1.Image = resizedBitmap;
         }
 
         // 鍵盤輸入
@@ -160,7 +160,7 @@ namespace Power_Point
         // 畫布繪圖
         public void HandleCanvasPaint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
-            CanvasSetLocationAndSize();
+            
             _formPresentationModel.Draw(e.Graphics);
         }
 
@@ -174,20 +174,28 @@ namespace Power_Point
         // SplitContainerAll Splitter 移動時
         public void SplitContainerAllSplitterMoved(Object sender, System.Windows.Forms.SplitterEventArgs e)
         {
+            if (_canvas != null)
+            {
+                _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
+                _splitContainerRight.Panel1.Height);
+                _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
+                Invalidate(true);
+            }
             if (_button1 != null)
-            { 
-                _button1.Width = _splitContainerAll.Panel1.Width - 10;
-                _button1.Height = _button1.Width * 9 / 16;
+            {
+                _formPresentationModel.SetButtonSize(_button1, _splitContainerAll.Panel1.Width);
             }
         }
 
         // SplitContainerRight Splitter 移動時
         public void SplitContainerRightSplitterMoved(Object sender, System.Windows.Forms.SplitterEventArgs e)
         {
-            if (_button1 != null)
+            if (_canvas != null)
             {
-                _button1.Width = _splitContainerAll.Panel1.Width - 10;
-                _button1.Height = _button1.Width * 9 / 16;
+                _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
+                _splitContainerRight.Panel1.Height);
+                _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
+                Invalidate(true);
             }
         }
 
@@ -196,14 +204,11 @@ namespace Power_Point
         {
             if (_canvas != null)
             {
-                CanvasSetLocationAndSize();
+                _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
+                _splitContainerRight.Panel1.Height);
+                _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
+                Invalidate(true);
             }
-            if (_button1 != null)
-            {
-                _button1.Width = _splitContainerAll.Panel1.Width - 10;
-                _button1.Height = _button1.Width * 9 / 16;
-            }
-            
         }
 
         // Undo
@@ -218,11 +223,6 @@ namespace Power_Point
         {
             _model.Redo();
             RefreshControls();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
