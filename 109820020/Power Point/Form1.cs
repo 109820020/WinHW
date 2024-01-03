@@ -50,8 +50,7 @@ namespace Power_Point
             // _shapeDataGridView binding
             _shapeDataGridView.AutoGenerateColumns = false;
             _shapeDataGridView.DataSource = _model.Shapes;
-
-
+           
             this.Resize += new System.EventHandler(this.ResizeHandler);
             _shapeDropDownList.SelectedItem = "線";
             RefreshControls();
@@ -67,6 +66,13 @@ namespace Power_Point
             _toolUndo.Enabled = _model.IsUndoEnabled();
             _toolRedo.Enabled = _model.IsRedoEnabled();
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
+            Bitmap bitmap = new Bitmap(_button1.Width, _button1.Height);
+            using (Graphics g = Graphics.FromImage(bitmap))
+            {
+                _formPresentationModel.Draw(g);
+            }
+            _button1.BackgroundImage = bitmap;
+            //**************************88888888
         }
 
         // canvas 座標Y值
@@ -212,6 +218,11 @@ namespace Power_Point
         {
             _model.Redo();
             RefreshControls();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
