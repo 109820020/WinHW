@@ -18,6 +18,7 @@ namespace Power_Point
         private const string INFO = "Info";
         private const int TWO = 2;
         private const int THREE = 3;
+        private const int FIVE = 5;
         protected string _name;
         protected bool _isSelect = false;
         protected int _x1;
@@ -135,7 +136,7 @@ namespace Power_Point
         // 選取外框圓圈繪圖
         private void DrawSelectedBoxCircle(IGraphics graphics)
         {
-            int radius = THREE;
+            int radius = FIVE;
             graphics.DrawCircle(_x1 - radius, _y1 - radius, _x1 + radius, _y1 + radius, BLACK);
             graphics.DrawCircle(_x1 - radius, _y2 - radius, _x1 + radius, _y2 + radius, BLACK);
             graphics.DrawCircle(_x2 - radius, _y1 - radius, _x2 + radius, _y1 + radius, BLACK);
