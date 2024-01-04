@@ -21,6 +21,9 @@ namespace Power_Point
         private int _canvasRelativeHeight = 1;
         private int _canvasActualWidth = 1;
         private int _canvasActualHeight = 1;
+        private Pages _pages;
+        private int _pageIndex = 0;
+        private List<Button> _buttonList;
 
         public FormPresentationModel(Model model)
         {
@@ -143,6 +146,38 @@ namespace Power_Point
         {
             button.Width = panelWidth - 10;
             button.Height = Convert.ToInt32( (double)button.Width * 9 / 16 );
+        }
+
+        // 更新頁面
+        public void RefreshPages(List<Button> pages, SplitContainer splitContainer)
+        {
+            _pages = _model.GetPages();
+            if (_pages.GetPageList().Count == 0)
+                _pages.AddPage();
+
+            pages.Clear();
+            int i;
+            for (i = 0; i < _pages.GetPageList().Count; i++)
+            {
+                Button button = new Button();
+                SetButtonSize(button, splitContainer.Panel1.Width);
+                button.Location = new System.Drawing.Point(5, i * (button.Height + 5) + 5);
+                button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+                button.Name = i.ToString();
+                button.UseVisualStyleBackColor = true;
+                button.Click += new System.EventHandler(ButtonClick);
+                splitContainer.Panel1.Controls.Add(button);
+                pages.Add(button);
+            }
+            pages.Last().Focus();
+            _buttonList = pages;
+        }
+
+        // ButtonClick Handler
+        private void ButtonClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            _pageIndex = int.Parse(button.Name);
         }
     }
 }

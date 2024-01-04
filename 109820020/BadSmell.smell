@@ -863,6 +863,11 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\Pages.cs</RelativePath>
+                <ProjectName>Power Point</ProjectName>
+                <AnalysisFileType>Unknown</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\PointState.cs</RelativePath>
                 <ProjectName>Power Point</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>

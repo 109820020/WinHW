@@ -14,11 +14,11 @@ namespace Power_Point
     {
         private const int CANVAS_RELATIVE_WIDTH = 1600;
         private const int CANVAS_RELATIVE_HIGHT = 900;
-        //CanvasSetLocationAndSize();************************************************************************
+        
         private Model _model;
         private FormPresentationModel _formPresentationModel;
         private Panel _canvas;
-        private System.Windows.Forms.Button _button1;
+        private List<Button> _pages;
 
         public Form1(Model model, FormPresentationModel formPresentationModel)
         {
@@ -30,16 +30,9 @@ namespace Power_Point
             _model._modelChanged += HandleModelChanged;
             this._formPresentationModel = formPresentationModel;
 
-            // _button1
-            this._button1 = new System.Windows.Forms.Button();
-            this._button1.Location = new System.Drawing.Point(5, 5);
-            this._button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this._button1.Name = "_button1";
-            this._button1.Size = new System.Drawing.Size(115, 65);
-            _formPresentationModel.SetButtonSize(_button1, _splitContainerAll.Panel1.Width);
-            this._button1.UseVisualStyleBackColor = true;
-            this._button1.Click += new System.EventHandler(this.Button1Click);
-            this._splitContainerAll.Panel1.Controls.Add(this._button1);
+            // button
+            _pages = new List<Button>();
+            _formPresentationModel.RefreshPages(_pages, _splitContainerAll);
 
             // prepare canvas
             _canvas = new DoubleBufferedPanel();
@@ -77,14 +70,13 @@ namespace Power_Point
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
 
             // button縮圖
-            Bitmap bitmap = new Bitmap(_canvas.Width, _canvas.Height);
-            //using (Graphics graphic = Graphics.FromImage(bitmap))
-            //{
-
-            //}
-            _canvas.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, _canvas.Width, _canvas.Height));
-            Bitmap resizedBitmap = new Bitmap(bitmap, _button1.Width, _button1.Height);
-            _button1.Image = resizedBitmap;
+            Bitmap bitmap = new Bitmap(_pages[0].Width, _pages[0].Height);
+            using (Graphics graphic = Graphics.FromImage(bitmap))
+            {
+                FormGraphicsAdapter graphicAdapter = new FormGraphicsAdapter(graphic, (double)_pages[0].Width / CANVAS_RELATIVE_WIDTH);
+                _model.Draw(graphicAdapter);
+            }
+            _pages[0].BackgroundImage = bitmap;
         }
 
         // 鍵盤輸入
@@ -143,6 +135,7 @@ namespace Power_Point
         private void ToolAddClick(object sender, EventArgs e)
         {
             _model.AddPage();
+            _formPresentationModel.RefreshPages(_pages, _splitContainerAll);
         }
 
         // 工具列Undo
@@ -201,10 +194,10 @@ namespace Power_Point
                 _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
                 Invalidate(true);
             }
-            if (_button1 != null)
-            {
-                _formPresentationModel.SetButtonSize(_button1, _splitContainerAll.Panel1.Width);
-            }
+            //if (_button1 != null)8888888888888888888888888888888888888888888888888888888888
+            //{
+            //    _formPresentationModel.SetButtonSize(_button1, _splitContainerAll.Panel1.Width);
+            //}
         }
 
         // SplitContainerRight Splitter 移動時
@@ -229,6 +222,11 @@ namespace Power_Point
                 _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
                 Invalidate(true);
             }
+        }
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

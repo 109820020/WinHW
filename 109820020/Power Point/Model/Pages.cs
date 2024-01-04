@@ -21,5 +21,11 @@ namespace Power_Point
         {
             _pages.Add(new Shapes());
         }
+
+        // 取得頁面
+        public List<Shapes> GetPageList()
+        {
+            return _pages;
+        }
     }
 }

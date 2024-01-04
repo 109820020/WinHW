@@ -19,13 +19,13 @@ namespace Power_Point
         private const string POINTER = "Pointer";
 
         private Pages _pages;
-        private Shapes _shapes;
-        private IState _state;
+        private Shapes _shapes; //000000000000000000000000000000000
+        private IState _state; //000000000000000000000000000000000
         private PointState _pointState;
         private LineState _lineState;
         private RectangleState _rectangleState;
         private CircleState _circleState;
-        private CommandManager _commandManager;
+        private CommandManager _commandManager; //000000000000000000000000000000000
 
         public Model()
         {
@@ -84,15 +84,11 @@ namespace Power_Point
             NotifyModelChanged();
         }
 
-
-
-
-
-
-
-
-
-
+        // 取得頁面
+        public Pages GetPages()
+        {
+            return _pages;
+        }
 
 
 
