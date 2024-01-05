@@ -27,5 +27,11 @@ namespace Power_Point
         {
             return _pages;
         }
+
+        // 取得Shapes for DataGridView databinding
+        public Shapes GetPageShapes(int index)
+        {
+            return _pages[index];
+        }
     }
 }

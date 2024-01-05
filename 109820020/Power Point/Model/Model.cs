@@ -19,7 +19,8 @@ namespace Power_Point
         private const string POINTER = "Pointer";
 
         private Pages _pages;
-        private Shapes _shapes; //000000000000000000000000000000000
+        private int _currentPageIndex; 
+        private Shapes _shapes; //have
         private IState _state; //000000000000000000000000000000000
         private PointState _pointState;
         private LineState _lineState;
@@ -30,6 +31,7 @@ namespace Power_Point
         public Model()
         {
             _pages = new Pages();
+            _currentPageIndex = 0;
             _shapes = new Shapes();
 
             _pointState = new PointState(this);
@@ -46,7 +48,7 @@ namespace Power_Point
         {
             get
             {
-                return _shapes.ShapeList;
+                return _pages.GetPageShapes(_currentPageIndex).ShapeList;
             }
         }
 
@@ -63,6 +65,14 @@ namespace Power_Point
         public int AddShape(string shapeName)
         {
             int index = _shapes.AddShape(shapeName);
+            NotifyModelChanged();
+            return index;
+        }
+
+        // 新增形狀 回傳形狀index
+        public int AddShape(Shape shape)
+        {
+            int index = _shapes.AddShape(shape);
             NotifyModelChanged();
             return index;
         }
@@ -94,13 +104,7 @@ namespace Power_Point
 
 
 
-        // 新增形狀 回傳形狀index
-        public int AddShape(Shape shape)
-        {
-            int index = _shapes.AddShape(shape);
-            NotifyModelChanged();
-            return index;
-        }
+        
 
         // 刪除形狀
         public void DeleteShape(int index)
