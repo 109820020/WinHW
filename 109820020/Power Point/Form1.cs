@@ -32,11 +32,12 @@ namespace Power_Point
 
             // button
             _pages = new List<Button>();
-            _formPresentationModel.RefreshPages(_pages, _splitContainerAll);
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
 
             // prepare canvas
             _canvas = new DoubleBufferedPanel();
-            _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width, 
+            _canvas = new DoubleBufferedPanel();
+            _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
                 _splitContainerRight.Panel1.Height);
             _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
             _canvas.BackColor = System.Drawing.Color.White;
@@ -68,21 +69,15 @@ namespace Power_Point
             _toolUndo.Enabled = _model.IsUndoEnabled();
             _toolRedo.Enabled = _model.IsRedoEnabled();
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
-
-            // button縮圖
-            Bitmap bitmap = new Bitmap(_pages[0].Width, _pages[0].Height);
-            using (Graphics graphic = Graphics.FromImage(bitmap))
-            {
-                FormGraphicsAdapter graphicAdapter = new FormGraphicsAdapter(graphic, (double)_pages[0].Width / CANVAS_RELATIVE_WIDTH);
-                _model.Draw(graphicAdapter);
-            }
-            _pages[0].BackgroundImage = bitmap;
+            _formPresentationModel.RefreshButtonImage(_pages);
         }
 
         // 鍵盤輸入
         public void FormKeyDown(object sender, KeyEventArgs e)
         {
             _formPresentationModel.KeyDown(e.KeyCode);
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
+            RefreshControls();
         }
 
         // Button1Click
@@ -106,28 +101,28 @@ namespace Power_Point
         // 工具列線按下
         private void ToolLineClick(object sender, EventArgs e)
         {
-            _formPresentationModel.ToolBarClick("Line");
+            _model.ChangeState("Line");
             RefreshControls();
         }
 
         // 工具列矩形按下
         private void ToolRectangleClick(object sender, EventArgs e)
         {
-            _formPresentationModel.ToolBarClick("Rectangle");
+            _model.ChangeState("Rectangle");
             RefreshControls();
         }
 
         // 工具列圓按下
         private void ToolCircleClick(object sender, EventArgs e)
         {
-            _formPresentationModel.ToolBarClick("Circle");
+            _model.ChangeState("Circle");
             RefreshControls();
         }
 
         // 工具列Pointer按下
         private void ToolPointerClick(object sender, EventArgs e)
         {
-            _formPresentationModel.ToolBarClick("Pointer");
+            _model.ChangeState("Pointer");
             RefreshControls();
         }
 
@@ -135,13 +130,15 @@ namespace Power_Point
         private void ToolAddClick(object sender, EventArgs e)
         {
             _model.AddPage();
-            _formPresentationModel.RefreshPages(_pages, _splitContainerAll);
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
+            RefreshControls();
         }
 
         // 工具列Undo
         private void ToolUndoClick(object sender, EventArgs e)
         {
             _model.Undo();
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
             RefreshControls();
         }
 
@@ -149,6 +146,7 @@ namespace Power_Point
         private void ToolRedoClick(object sender, EventArgs e)
         {
             _model.Redo();
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
             RefreshControls();
         }
 
@@ -192,12 +190,9 @@ namespace Power_Point
                 _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
                 _splitContainerRight.Panel1.Height);
                 _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
-                Invalidate(true);
             }
-            //if (_button1 != null)8888888888888888888888888888888888888888888888888888888888
-            //{
-            //    _formPresentationModel.SetButtonSize(_button1, _splitContainerAll.Panel1.Width);
-            //}
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
+            Invalidate(true);
         }
 
         // SplitContainerRight Splitter 移動時
@@ -208,11 +203,11 @@ namespace Power_Point
                 _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
                 _splitContainerRight.Panel1.Height);
                 _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
-                Invalidate(true);
             }
+            Invalidate(true);
         }
 
-        // SplitContainerRight Splitter 移動時
+        // Resize
         public void ResizeHandler(Object sender, EventArgs e)
         {
             if (_canvas != null)
@@ -220,13 +215,8 @@ namespace Power_Point
                 _formPresentationModel.SetCanvasLocationAndSize(_canvas, _splitContainerRight.Panel1.Width,
                 _splitContainerRight.Panel1.Height);
                 _formPresentationModel.SetCanvasActualSize(_canvas.Width, _canvas.Height);
-                Invalidate(true);
             }
-        }
-
-        public void button1_Click(object sender, EventArgs e)
-        {
-
+            Invalidate(true);
         }
     }
 }

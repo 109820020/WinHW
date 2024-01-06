@@ -12,28 +12,30 @@ namespace Power_Point
         private Model _model;
         private Shape _shape;
         private int _shapeIndex;
+        private int _pageIndex;
 
-        public DeleteCommand(Model model, int index)
+        public DeleteCommand(Model model, int pageIndex, int index)
         {
             _model = model;
             _shape = null;
             _shapeIndex = index;
+            _pageIndex = pageIndex;
         }
 
         // 執行
         public void Execute()
         {
             Debug.Assert(_shapeIndex >= 0);
-            _shape = _model.GetShape(_shapeIndex);
+            _shape = _model.GetShape(_pageIndex, _shapeIndex);
             Debug.Assert(_shape != null);
-            _model.DeleteShape(_shapeIndex);
+            _model.DeleteShape(_pageIndex, _shapeIndex);
         }
 
         // 回復
         public void Unexecute()
         {
             Debug.Assert(_shape != null);
-            _model.InsertShape(_shape, _shapeIndex);
+            _model.InsertShape(_pageIndex, _shapeIndex, _shape);
         }
     }
 }

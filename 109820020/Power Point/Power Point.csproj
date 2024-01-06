@@ -64,24 +64,18 @@
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Model\CircleState.cs" />
-    <Compile Include="Model\AddCommand.cs" />
-    <Compile Include="Model\DeleteCommand.cs" />
-    <Compile Include="Model\DrawCommand.cs" />
-    <Compile Include="Model\ICommand.cs" />
-    <Compile Include="Model\RectangleState.cs" />
-    <Compile Include="Model\LineState.cs" />
-    <Compile Include="Model\DrawingState.cs" />
-    <Compile Include="Model\PointState.cs" />
-    <Compile Include="Model\IState.cs" />
+    <Compile Include="Model\Command\AddCommand.cs" />
+    <Compile Include="Model\Command\CommandManager.cs" />
+    <Compile Include="Model\Command\DeleteCommand.cs" />
+    <Compile Include="Model\Command\DrawCommand.cs" />
+    <Compile Include="Model\Command\ICommand.cs" />
     <Compile Include="Model\IGraphics.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\Factory.cs" />
-    <Compile Include="Model\Shape.cs" />
-    <Compile Include="Model\Line.cs" />
-    <Compile Include="Model\Circle.cs" />
-    <Compile Include="Model\Rectangle.cs" />
-    <Compile Include="Model\CommandManager.cs" />
+    <Compile Include="Model\Shape\Shape.cs" />
+    <Compile Include="Model\Shape\Line.cs" />
+    <Compile Include="Model\Shape\Circle.cs" />
+    <Compile Include="Model\Shape\Rectangle.cs" />
     <Compile Include="Model\Pages.cs" />
     <Compile Include="Model\Shapes.cs" />
     <Compile Include="Form1.cs">
@@ -90,6 +84,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\State\CircleState.cs" />
+    <Compile Include="Model\State\DrawingState.cs" />
+    <Compile Include="Model\State\IState.cs" />
+    <Compile Include="Model\State\LineState.cs" />
+    <Compile Include="Model\State\PointState.cs" />
+    <Compile Include="Model\State\RectangleState.cs" />
     <Compile Include="PresentationModel\FormPresentationModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,5 +145,6 @@
     <None Include="Properties\Resources\Undo.png" />
     <None Include="Properties\Resources\Pointer.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

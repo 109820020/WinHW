@@ -44,7 +44,7 @@ namespace Power_Point
             {
                 _isMouseDown = false;
                 _hint.ChangeSecondPoint(pointX, pointY);
-                _model.CommandManager.Execute(new DrawCommand(_model, _hint));
+                _model.CommandManager.Execute(new DrawCommand(_model, _model.GetCurrentPageIndex(), _hint));
             }
         }
 

@@ -20,19 +20,17 @@ namespace Power_Point
 
         private Pages _pages;
         private int _currentPageIndex; 
-        private Shapes _shapes; //have
-        private IState _state; //000000000000000000000000000000000
+        private IState _state;
         private PointState _pointState;
         private LineState _lineState;
         private RectangleState _rectangleState;
         private CircleState _circleState;
-        private CommandManager _commandManager; //000000000000000000000000000000000
+        private CommandManager _commandManager;
 
         public Model()
         {
             _pages = new Pages();
             _currentPageIndex = 0;
-            _shapes = new Shapes();
 
             _pointState = new PointState(this);
             _lineState = new LineState(this);
@@ -48,7 +46,7 @@ namespace Power_Point
         {
             get
             {
-                return _pages.GetPageShapes(_currentPageIndex).ShapeList;
+                return _pages.BindingShapes;
             }
         }
 
@@ -61,62 +59,66 @@ namespace Power_Point
             }
         }
 
-        // 新增隨機形狀 回傳形狀index
-        public int AddShape(string shapeName)
+        // GetCurrentPageIndex
+        public int GetCurrentPageIndex()
         {
-            int index = _shapes.AddShape(shapeName);
-            NotifyModelChanged();
-            return index;
+            return _currentPageIndex;
         }
 
-        // 新增形狀 回傳形狀index
-        public int AddShape(Shape shape)
+        // 取得頁面數量
+        public int GetNumPages()
         {
-            int index = _shapes.AddShape(shape);
+            return _pages.GetNumPages();
+        }
+
+        // 增加頁面
+        public void AddPage()
+        {
+            _pages.AddPage(++_currentPageIndex);
             NotifyModelChanged();
-            return index;
+        }
+
+        // 切換頁面
+        public void SwitchPage(int index)
+        {
+            _currentPageIndex = index;
+            // 切換 BindingShapes
+            _pages.SwitchBindingShapes(index);
         }
 
         // 新增隨機形狀到 CmdManager
         public void AddShapeToCommandManager(string shapeName)
         {
-            _commandManager.Execute(new AddCommand(this, shapeName));
+            _commandManager.Execute(new AddCommand(this, _currentPageIndex, shapeName));
         }
 
-
-
-
-
-        // 增加頁面
-        public void AddPage()
+        // 新增隨機形狀 回傳形狀index
+        public int AddShape(int pageIndex, string shapeName)
         {
-            _pages.AddPage();
+            int index = _pages.AddShape(pageIndex, shapeName);
             NotifyModelChanged();
+            return index;
         }
 
-        // 取得頁面
-        public Pages GetPages()
+        // 新增形狀 回傳形狀index
+        public int AddShape(int pageIndex, Shape shape)
         {
-            return _pages;
+            int index = _pages.AddShape(pageIndex, shape);
+            NotifyModelChanged();
+            return index;
         }
-
-
-
-
-
-        
 
         // 刪除形狀
-        public void DeleteShape(int index)
+        public void DeleteShape(int pageIndex, int index)
         {
-            _shapes.DeleteShape(index);
+            _pages.DeleteShape(pageIndex, index);
             NotifyModelChanged();
         }
 
         // 刪除形狀
         public void DeleteShapeToCommandManager(int index)
         {
-            _commandManager.Execute(new DeleteCommand(this, index));
+            _commandManager.Execute(new DeleteCommand(this, _currentPageIndex, index));
         }
 
         // ChangeState
@@ -174,26 +176,26 @@ namespace Power_Point
         // 無選到任何形狀回傳-1
         public int SelectShape(int pointX, int pointY)
         {
-            return _shapes.SelectShape(pointX, pointY);
+            return _pages.SelectShape(_currentPageIndex, pointX, pointY);
         }
 
         // 取得形狀
-        public Shape GetShape(int index)
+        public Shape GetShape(int pageIndex, int index)
         {
-            return _shapes.GetShape(index);
+            return _pages.GetShape(pageIndex, index);
         }
 
         // 插入形狀
-        public void InsertShape(Shape shape, int index)
+        public void InsertShape(int pageIndex, int index, Shape shape)
         {
-            _shapes.InsertShape(shape, index);
+            _pages.InsertShape(pageIndex, index, shape);
             NotifyModelChanged();
         }
 
         // 移動形狀by位移
         public void MoveShape(int index, int offsetX, int offsetY)
         {
-            _shapes.MoveShape(index, offsetX, offsetY);
+            _pages.MoveShape(_currentPageIndex, index, offsetX, offsetY);
         }
 
         // KeyDown
@@ -224,14 +226,21 @@ namespace Power_Point
             NotifyModelChanged();
         }
         
-        // 畫布繪圖
+        // 畫布繪圖(當前頁面)
         public void Draw(IGraphics graphics)
         {
             graphics.ClearAll();
-            _shapes.DrawAllShapes(graphics);
+            _pages.DrawShapes(_currentPageIndex, graphics);
             _state.Draw(graphics);
         }
-        
+
+        // 畫布繪圖(By index)
+        public void Draw(int pageIndex, IGraphics graphics)
+        {
+            graphics.ClearAll();
+            _pages.DrawShapes(pageIndex, graphics);
+        }
+
         // Model改變事件
         private void NotifyModelChanged()
         {
