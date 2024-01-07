@@ -46,7 +46,7 @@ namespace Power_Point
         {
             get
             {
-                return _pages.BindingShapes;
+                return _pages.BindingShapes(_currentPageIndex);
             }
         }
 
@@ -82,8 +82,19 @@ namespace Power_Point
         public void SwitchPage(int index)
         {
             _currentPageIndex = index;
-            // 切換 BindingShapes
-            _pages.SwitchBindingShapes(index);
+            NotifyModelChanged();
+        }
+
+        // 刪除頁面
+        public void DeletePage()
+        {
+            if (_pages.GetNumPages() == 1)
+                _pages.ClearShapes(0);
+            else
+            {
+                _pages.DeletePage(_currentPageIndex);
+                _currentPageIndex = (_currentPageIndex - 1) >= 0 ? _currentPageIndex - 1 : 0;
+            }
         }
 
         // 新增隨機形狀到 CmdManager
@@ -202,7 +213,6 @@ namespace Power_Point
         public void KeyDown(string key)
         {
             _state.KeyDown(key);
-            NotifyModelChanged();
         }
 
         // 在畫布中按下左鍵

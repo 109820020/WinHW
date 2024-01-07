@@ -46,7 +46,13 @@ namespace Power_Point
         {
             _shapeList.RemoveAt(index);
         }
-        
+
+        // 清除所有形狀
+        public void ClearShapes()
+        {
+            _shapeList.Clear();
+        }
+
         // 畫布繪圖
         public void DrawAllShapes(IGraphics graphics)
         {

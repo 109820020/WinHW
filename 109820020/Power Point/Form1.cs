@@ -70,6 +70,7 @@ namespace Power_Point
             _toolRedo.Enabled = _model.IsRedoEnabled();
             _canvas.Cursor = _formPresentationModel.GetCanvasCursorType();
             _formPresentationModel.RefreshButtonImage(_pages);
+            _shapeDataGridView.DataSource = _model.Shapes;
         }
 
         // 鍵盤輸入
@@ -78,11 +79,6 @@ namespace Power_Point
             _formPresentationModel.KeyDown(e.KeyCode);
             _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
             RefreshControls();
-        }
-
-        // Button1Click
-        private void Button1Click(object sender, EventArgs e)
-        {
         }
 
         // 新增Shape

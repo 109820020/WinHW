@@ -66,11 +66,17 @@ namespace Power_Point
         // KeyDown
         public void KeyDown(string key)
         {
-            if (_selectedIndex >= 0)
+            if (_selectedIndex >= 0 && !_isMouseDown)
             {
                 if (key == KEY_DELETE)
                     _model.CommandManager.Execute(new DeleteCommand(_model, _model.GetCurrentPageIndex(), 
                         _selectedIndex));
+                _selectedIndex = -1;
+            }
+            else if (_selectedIndex < 0 && !_isMouseDown)
+            {
+                if (key == KEY_DELETE)
+                    _model.DeletePage();
             }
         }
 

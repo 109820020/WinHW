@@ -10,13 +10,11 @@ namespace Power_Point
     public class Pages
     {
         private List<Shapes> _pages;
-        private BindingList<Shape> _bindingShapes;
 
         public Pages()
         {
             _pages = new List<Shapes>();
             _pages.Add(new Shapes());
-            _bindingShapes = new BindingList<Shape>();
         }
 
         // 增加頁面
@@ -31,23 +29,16 @@ namespace Power_Point
             return _pages.Count();
         }
 
-        // 取得Shapes for DataGridView databinding
-        public BindingList<Shape> BindingShapes
+        // 刪除頁面
+        public void DeletePage(int pageIndex)
         {
-            get
-            {
-                return _bindingShapes;
-            }
+            _pages.RemoveAt(pageIndex);
         }
 
-        // 切換 BindingShapes
-        public void SwitchBindingShapes(int index)
+        // 取得Shapes for DataGridView databinding
+        public BindingList<Shape> BindingShapes(int pageIndex)
         {
-            _bindingShapes.Clear();
-            foreach (Shape shape in _pages[index].ShapeList)
-            {
-                _bindingShapes.Add(shape);
-            }
+                return _pages[pageIndex].ShapeList;
         }
 
         // 新增形狀 回傳形狀index
@@ -66,6 +57,12 @@ namespace Power_Point
         public void DeleteShape(int pageIndex, int index)
         {
             _pages[pageIndex].DeleteShape(index);
+        }
+
+        // 清除所有形狀
+        public void ClearShapes(int pageIndex)
+        {
+            _pages[pageIndex].ClearShapes();
         }
 
         // 選取並回傳指標所選取最上面的形狀的index
