@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ComponentModel;
+using System.Threading;
+using System.IO;
 
 namespace Power_Point
 {
@@ -17,6 +19,8 @@ namespace Power_Point
         private const string RECTANGLE = "Rectangle";
         private const string CIRCLE = "Circle";
         private const string POINTER = "Pointer";
+        const string APPLICATION_NAME = "Power_Point";
+        const string CLIENT_SECRET_FILE_NAME = "clientSecret.json";
 
         private Pages _pages;
         private int _currentPageIndex; 
@@ -26,6 +30,7 @@ namespace Power_Point
         private RectangleState _rectangleState;
         private CircleState _circleState;
         private CommandManager _commandManager;
+        GoogleDriveService _service;
 
         public Model()
         {
@@ -39,6 +44,7 @@ namespace Power_Point
             // 預設 Point State
             _state = _pointState;
             _commandManager = new CommandManager();
+            _service = new GoogleDriveService(APPLICATION_NAME, CLIENT_SECRET_FILE_NAME);
         }
 
         // binding DataGridView 所需屬性
@@ -98,15 +104,16 @@ namespace Power_Point
         }
 
         // 新增隨機形狀到 CmdManager
-        public void AddShapeToCommandManager(string shapeName)
+        public void AddShapeToCommandManager(string shapeName, int x1, int y1, int x2, int y2)
         {
-            _commandManager.Execute(new AddCommand(this, _currentPageIndex, shapeName));
+            _commandManager.Execute(new AddCommand(this, _currentPageIndex, shapeName, 
+                x1, y1, x2, y2));
         }
 
-        // 新增隨機形狀 回傳形狀index
-        public int AddShape(int pageIndex, string shapeName)
+        // 新增形狀 回傳形狀index
+        public int AddShape(int pageIndex, string shapeName, int x1, int y1, int x2, int y2)
         {
-            int index = _pages.AddShape(pageIndex, shapeName);
+            int index = _pages.AddShape(pageIndex, shapeName, x1, y1, x2, y2);
             NotifyModelChanged();
             return index;
         }
@@ -249,6 +256,66 @@ namespace Power_Point
         {
             graphics.ClearAll();
             _pages.DrawShapes(pageIndex, graphics);
+        }
+
+        // Save
+        public bool Save()
+        {
+            try
+            {
+                string path = "PPT.fppt";
+                StreamWriter streamWriter = new StreamWriter(path, false, Encoding.UTF8);
+                _pages.SaveShapes(streamWriter);
+                streamWriter.Close();
+
+                const string CONTENT_TYPE = "application/octet-stream";
+                string fileId = SearchCloudFile(path);
+                if (fileId == "")
+                    _service.UploadFile(path, CONTENT_TYPE);
+                else
+                    _service.UpdateFile(path, fileId, CONTENT_TYPE);
+
+                Thread.Sleep(10000);
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        // Load
+        public bool Load()
+        {
+            try
+            {
+                string path = System.Windows.Forms.Application.StartupPath;
+                string title = "PPT.fppt";
+                List<Google.Apis.Drive.v2.Data.File> rootFoldersFiles = _service.ListRootFileAndFolder();
+                Google.Apis.Drive.v2.Data.File foundFile = rootFoldersFiles.Find(item => item.Title == title);
+                _service.DownloadFile(foundFile, path);
+
+                StreamReader streamReader = new StreamReader(title);
+                _pages.LoadPages(streamReader);
+                streamReader.Close();
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        // 尋找雲端檔案
+        private string SearchCloudFile(string fileName)
+        {
+            List<Google.Apis.Drive.v2.Data.File> fileList = _service.ListRootFileAndFolder();
+            Google.Apis.Drive.v2.Data.File foundFile = fileList.Find(item => { return item.Title == fileName; });
+            if (foundFile != null)
+                return foundFile.Id;
+            else
+                return "";
         }
 
         // Model改變事件

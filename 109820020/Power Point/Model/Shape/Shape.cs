@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.IO;
 
 namespace Power_Point
 {
@@ -38,6 +39,15 @@ namespace Power_Point
             return _name;
         }
 
+        // binding DataGridView 所需屬性
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+        }
+
         // 取得座標
         public string GetInfo()
         {
@@ -47,15 +57,6 @@ namespace Power_Point
             int y2 = Math.Max(_y1, _y2);
             return LEFT_PARENTHESIS + x1 + COMMA + y1 + RIGHT_PARENTHESIS + COMMA + LEFT_PARENTHESIS + 
                 x2 + COMMA + y2 + RIGHT_PARENTHESIS;
-        }
-
-        // binding DataGridView 所需屬性
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
         }
 
         // binding DataGridView 所需屬性
@@ -148,6 +149,13 @@ namespace Power_Point
             graphics.DrawCircle(middleX - radius, _y1 - radius, middleX + radius, _y1 + radius, BLACK);
             graphics.DrawCircle(middleX - radius, _y2 - radius, middleX + radius, _y2 + radius, BLACK);
             graphics.DrawCircle(_x2 - radius, middleY - radius, _x2 + radius, middleY + radius, BLACK);
+        }
+
+        // 寫入shape data
+        public void SaveInfo(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine(_name + "," + _x1.ToString() + "," + _y1.ToString() + "," + _x2.ToString()
+                + "," + _y2.ToString());
         }
 
         // 畫布繪圖

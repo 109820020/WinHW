@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.IO;
 
 namespace Power_Point
 {
@@ -42,9 +43,9 @@ namespace Power_Point
         }
 
         // 新增形狀 回傳形狀index
-        public int AddShape(int pageIndex, string shapeName)
+        public int AddShape(int pageIndex, string shapeName, int x1, int y1, int x2, int y2)
         {
-            return _pages[pageIndex].AddShape(shapeName);
+            return _pages[pageIndex].AddShape(shapeName, x1, y1, x2, y2);
         }
 
         // 新增形狀 回傳形狀index
@@ -94,6 +95,29 @@ namespace Power_Point
         public void DrawShapes(int pageIndex, IGraphics graphics)
         {
             _pages[pageIndex].DrawAllShapes(graphics);
+        }
+
+        // 寫入pages
+        public void SaveShapes(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine(_pages.Count.ToString());
+            foreach (Shapes shapes in _pages)
+            {
+                shapes.SaveShape(streamWriter);
+            }
+        }
+
+        // 讀入pages
+        public void LoadPages(StreamReader streamReader)
+        {
+            _pages.Clear();
+            int numPages = int.Parse(streamReader.ReadLine());
+            for (int i=0; i < numPages; i++)
+            {
+                Shapes shapes = new Shapes();
+                shapes.LoadShape(streamReader);
+                _pages.Add(shapes);
+            }
         }
     }
 }

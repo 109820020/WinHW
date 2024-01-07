@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.IO;
 
 namespace Power_Point
 {
@@ -28,9 +29,9 @@ namespace Power_Point
         }
 
         // AddShape(string)
-        public int AddShape(string shapeName)
+        public int AddShape(string shapeName, int x1, int y1, int x2, int y2)
         {
-            _shapeList.Add(_factory.AddShape(shapeName));
+            _shapeList.Add(_factory.AddShape(shapeName, x1, y1, x2, y2));
             return _shapeList.Count - 1;
         }
 
@@ -92,6 +93,28 @@ namespace Power_Point
         public void MoveShape(int index, int offsetX, int offsetY)
         {
             _shapeList[index].MoveShape(offsetX, offsetY);
+        }
+
+        // 寫入shape
+        public void SaveShape(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine(_shapeList.Count.ToString());
+            foreach (Shape shape in _shapeList)
+            {
+                shape.SaveInfo(streamWriter);
+            }
+        }
+        
+        // 寫入shape
+        public void LoadShape(StreamReader streamReader)
+        {
+            int numShapes = int.Parse(streamReader.ReadLine());
+            for (int i = 0; i < numShapes; i++)
+            {
+                string[] shapeData = streamReader.ReadLine().Split(',');
+                AddShape(shapeData[0], int.Parse(shapeData[1]), int.Parse(shapeData[2]),
+                    int.Parse(shapeData[3]), int.Parse(shapeData[4]));
+            }
         }
     }
 }

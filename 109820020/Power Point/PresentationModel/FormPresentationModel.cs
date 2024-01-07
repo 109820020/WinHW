@@ -73,6 +73,43 @@ namespace Power_Point
             return _model.GetToolState() == POINTER;
         }
 
+        // AddButtonClick
+        public void AddButtonClick(string shape)
+        {
+            NewShapeForm dialog = new NewShapeForm();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                _model.AddShapeToCommandManager(shape, dialog.TopLeftX, dialog.TopLeftY,
+                    dialog.BottomRightX, dialog.BottomRightY);
+                int a = 0;
+            }
+            else
+            {
+                
+            }
+            dialog.Dispose();
+        }
+
+        // 工具列Save
+        public void ToolSaveClick(DialogResult dialogResult)
+        {
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (!_model.Save())
+                    MessageBox.Show("存檔發生錯誤", "",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+        }
+
+        // 工具列Load
+        public void ToolLoadClick(DialogResult dialogResult)
+        {
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (!_model.Load())
+                    MessageBox.Show("讀檔發生錯誤", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // 取得游標類型
         public Cursor GetCanvasCursorType()
         {

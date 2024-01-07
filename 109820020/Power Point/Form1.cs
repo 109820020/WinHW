@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Power_Point
 {
@@ -85,7 +86,7 @@ namespace Power_Point
         private void AddButtonClick(object sender, EventArgs e)
         {
             string shape = _shapeDropDownList.SelectedItem.ToString();
-            _model.AddShapeToCommandManager(shape);
+            _formPresentationModel.AddButtonClick(shape);
         }
 
         // 刪除形狀按鈕
@@ -144,6 +145,33 @@ namespace Power_Point
             _model.Redo();
             _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
             RefreshControls();
+        }
+
+        // 工具列Save
+        private async void ToolSaveClick(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("是否確定要儲存", "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            Cursor = Cursors.WaitCursor;
+            _toolSave.Enabled = false;
+            // 下一行程式使用 await，因此在完成前，就會繼續執行UI Thread
+            await Task.Factory.StartNew(() => _formPresentationModel.ToolSaveClick(dialogResult));
+            Cursor = Cursors.Arrow;
+            _toolSave.Enabled = true;
+            RefreshControls();
+        }
+
+        // 工具列Load
+        private void ToolLoadClick(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("是否要重新載入", "",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            Cursor = Cursors.WaitCursor;
+            _formPresentationModel.ToolLoadClick(dialogResult);
+            Cursor = Cursors.Arrow;
+            _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
+            RefreshControls();
+            Invalidate(true);
         }
 
         // 在畫布中按下左鍵
