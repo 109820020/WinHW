@@ -77,11 +77,32 @@ namespace Power_Point
             return _pages.GetNumPages();
         }
 
-        // 增加頁面
-        public void AddPage()
+        // 取得頁面for delete command
+        public Shapes GetPage(int pageIndex)
         {
-            _pages.AddPage(++_currentPageIndex);
+            return _pages.GetPage(pageIndex);
+        }
+
+        // 增加頁面
+        public void AddPage(int index)
+        {
+            _pages.AddPage(index);
+            _currentPageIndex = index;
             NotifyModelChanged();
+        }
+
+        // 增加頁面 by Shapes for delete command
+        public void AddPage(int index, Shapes shapes)
+        {
+            _pages.AddPage(index, shapes);
+            _currentPageIndex = index;
+            NotifyModelChanged();
+        }
+
+        // 增加頁面
+        public void AddPageToCommandManager()
+        {
+            _commandManager.Execute(new AddPageCommand(this, _currentPageIndex + 1));
         }
 
         // 切換頁面
@@ -92,15 +113,21 @@ namespace Power_Point
         }
 
         // 刪除頁面
-        public void DeletePage()
+        public void DeletePage(int index)
         {
             if (_pages.GetNumPages() == 1)
                 _pages.ClearShapes(0);
             else
             {
-                _pages.DeletePage(_currentPageIndex);
+                _pages.DeletePage(index);
                 _currentPageIndex = (_currentPageIndex - 1) >= 0 ? _currentPageIndex - 1 : 0;
             }
+        }
+
+        // 刪除頁面
+        public void DeletePageToCommandManager()
+        {
+            _commandManager.Execute(new DeletePageCommand(this, _currentPageIndex));
         }
 
         // 新增隨機形狀到 CmdManager
@@ -267,18 +294,16 @@ namespace Power_Point
                 StreamWriter streamWriter = new StreamWriter(path, false, Encoding.UTF8);
                 _pages.SaveShapes(streamWriter);
                 streamWriter.Close();
-
                 const string CONTENT_TYPE = "application/octet-stream";
                 string fileId = SearchCloudFile(path);
                 if (fileId == "")
                     _service.UploadFile(path, CONTENT_TYPE);
                 else
                     _service.UpdateFile(path, fileId, CONTENT_TYPE);
-
                 Thread.Sleep(10000);
                 return true;
             }
-            catch(Exception e)
+            catch
             {
                 return false;
             }
@@ -294,14 +319,12 @@ namespace Power_Point
                 List<Google.Apis.Drive.v2.Data.File> rootFoldersFiles = _service.ListRootFileAndFolder();
                 Google.Apis.Drive.v2.Data.File foundFile = rootFoldersFiles.Find(item => item.Title == title);
                 _service.DownloadFile(foundFile, path);
-
                 StreamReader streamReader = new StreamReader(title);
                 _pages.LoadPages(streamReader);
                 streamReader.Close();
-
                 return true;
             }
-            catch (Exception e)
+            catch
             {
                 return false;
             }

@@ -96,15 +96,11 @@ namespace Power_Point
                 if (_topLeftX >= 0 && _topLeftX <= 1600 && _topLeftY >= 0 && _topLeftY <= 900 &&
                     _bottomRightX > _topLeftX && _bottomRightX <= 1600 && 
                     _bottomRightY > _topLeftY && _bottomRightY <= 900)
-                {
                     _buttonOk.Enabled = true;
-                }
                 else
-                {
                     _buttonOk.Enabled = false;
-                }
             }
-            catch(Exception e)
+            catch
             {
                 _buttonOk.Enabled = false;
             }

@@ -24,6 +24,18 @@ namespace Power_Point
             _pages.Insert(pageIndex, new Shapes());
         }
 
+        // 增加頁面 by Shapes for delete command
+        public void AddPage(int pageIndex, Shapes shapes)
+        {
+            _pages.Insert(pageIndex, shapes);
+        }
+
+        // 取得頁面for delete command
+        public Shapes GetPage(int pageIndex)
+        {
+            return _pages[pageIndex];
+        }
+
         // 取得頁面數量
         public int GetNumPages()
         {

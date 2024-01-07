@@ -14,6 +14,7 @@ namespace Power_Point
         private const string LEFT_PARENTHESIS = "(";
         private const string RIGHT_PARENTHESIS = ")";
         private const string COMMA = ", ";
+        private const char COMMA2 = ',';
         private const string BLACK = "Black";
         private const string GRAY = "Gray";
         private const string INFO = "Info";
@@ -154,8 +155,8 @@ namespace Power_Point
         // 寫入shape data
         public void SaveInfo(StreamWriter streamWriter)
         {
-            streamWriter.WriteLine(_name + "," + _x1.ToString() + "," + _y1.ToString() + "," + _x2.ToString()
-                + "," + _y2.ToString());
+            streamWriter.WriteLine(_name + COMMA2 + _x1.ToString() + COMMA2 + _y1.ToString() + COMMA2 + _x2.ToString()
+                + COMMA2 + _y2.ToString());
         }
 
         // 畫布繪圖

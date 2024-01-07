@@ -51,12 +51,12 @@ undo redo 提示字改
 1.座標縮放，data grid 座標可不變嗎
 2.bad smell 忽略
 ******************************************************************
-[10 pts] 新增刪除頁面
-[3 pts]對話框
-[10 pts] Save and Load
-縮放
 [20 pts] GUI Testing
 [5 pts] Undo and Redo
+縮放
+test 3
+smell 16
+
 
 
 

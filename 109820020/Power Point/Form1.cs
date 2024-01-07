@@ -126,7 +126,7 @@ namespace Power_Point
         // 工具列新增頁面按下
         private void ToolAddClick(object sender, EventArgs e)
         {
-            _model.AddPage();
+            _model.AddPageToCommandManager();
             _formPresentationModel.RefreshPagesSize(_pages, _splitContainerAll);
             RefreshControls();
         }

@@ -89,6 +89,8 @@
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\Command\DeletePageCommand.cs" />
+    <Compile Include="Model\Command\AddPageCommand.cs" />
     <Compile Include="NewShapeForm.cs">
       <SubType>Form</SubType>
     </Compile>

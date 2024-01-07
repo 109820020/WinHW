@@ -18,7 +18,9 @@ namespace Power_Point
 {
     public class GoogleDriveService
     {
-        private static readonly string[] SCOPES = new[] { DriveService.Scope.DriveFile, DriveService.Scope.Drive };
+        private const int TWO = 2;
+
+        private static readonly string[] _scope = new[] { DriveService.Scope.DriveFile, DriveService.Scope.Drive };
         private DriveService _service;
         private const int KB = 0x400;
         private const int DOWNLOAD_CHUNK_SIZE = 256 * KB;
@@ -39,6 +41,7 @@ namespace Power_Point
             this.CreateNewService(applicationName, clientSecretFileName);
         }
 
+        // 123
         private void CreateNewService(string applicationName, string clientSecretFileName)
         {
             const string USER = "user";
@@ -49,15 +52,14 @@ namespace Power_Point
             {
                 string credentialPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 credentialPath = Path.Combine(credentialPath, CREDENTIAL_FOLDER + applicationName);
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets, 
-                    SCOPES, USER, CancellationToken.None, new FileDataStore(credentialPath, true)).Result;
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.FromStream(stream).Secrets, 
+                    _scope, USER, CancellationToken.None, new FileDataStore(credentialPath, true)).Result;
             }
 
-            DriveService service = new DriveService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = applicationName
-            });
+            DriveService service = new DriveService(new 
+                BaseClientService.Initializer()
+            { 
+                HttpClientInitializer = credential, ApplicationName = applicationName });
 
             _credential = credential;
             DateTime now = DateTime.Now;
@@ -155,13 +157,14 @@ namespace Power_Point
             else
                 title = uploadFileName;
 
-            Google.Apis.Drive.v2.Data.File fileToInsert = new Google.Apis.Drive.v2.Data.File { Title = title };
+            Google.Apis.Drive.v2.Data.File fileToInsert = new Google.Apis.Drive.v2.Data.File 
+            { 
+                Title = title };
             FilesResource.InsertMediaUpload insertRequest = _service.Files.Insert(fileToInsert, uploadStream, contentType);
-            insertRequest.ChunkSize = FilesResource.InsertMediaUpload.MinimumChunkSize * 2;
+            insertRequest.ChunkSize = FilesResource.InsertMediaUpload.MinimumChunkSize * TWO;
 
             if (uploadProgressEventHandeler != null)
                 insertRequest.ProgressChanged += uploadProgressEventHandeler;
-
 
             if (responseReceivedEventHandler != null)
                 insertRequest.ResponseReceived += responseReceivedEventHandler;

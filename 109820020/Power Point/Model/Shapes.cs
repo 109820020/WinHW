@@ -10,6 +10,10 @@ namespace Power_Point
 {
     public class Shapes
     {
+        private const int TWO = 2;
+        private const int THREE = 3;
+        private const int FOUR = 4;
+
         private BindingList<Shape> _shapeList;
         private Factory _factory;
 
@@ -112,8 +116,8 @@ namespace Power_Point
             for (int i = 0; i < numShapes; i++)
             {
                 string[] shapeData = streamReader.ReadLine().Split(',');
-                AddShape(shapeData[0], int.Parse(shapeData[1]), int.Parse(shapeData[2]),
-                    int.Parse(shapeData[3]), int.Parse(shapeData[4]));
+                AddShape(shapeData[0], int.Parse(shapeData[1]), int.Parse(shapeData[TWO]),
+                    int.Parse(shapeData[THREE]), int.Parse(shapeData[FOUR]));
             }
         }
     }

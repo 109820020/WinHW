@@ -81,7 +81,6 @@ namespace Power_Point
             {
                 _model.AddShapeToCommandManager(shape, dialog.TopLeftX, dialog.TopLeftY,
                     dialog.BottomRightX, dialog.BottomRightY);
-                int a = 0;
             }
             else
             {

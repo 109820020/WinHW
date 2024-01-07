@@ -76,7 +76,7 @@ namespace Power_Point
             else if (_selectedIndex < 0 && !_isMouseDown)
             {
                 if (key == KEY_DELETE)
-                    _model.DeletePage();
+                    _model.DeletePageToCommandManager();
             }
         }
 
